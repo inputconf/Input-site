@@ -3,8 +3,8 @@
     "tagname-lowercase": false,
     "attr-value-double-quotes": false,
     "attr-no-duplication": true,
-    "tag-pair": true,
-    "tag-self-close": true,
+    "tag-pair": false,
+    "tag-self-close": false,
     "id-unique": true,
     "doctype-first": false
 }

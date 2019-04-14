@@ -1,3 +1,56 @@
-<section class="themes">
-  themes123
+{% set
+  list = [
+    {
+      themes: 'Як почати свій шлях в галузі і знайти першу роботу?'
+    },
+    {
+      themes: 'Я у мами гуманітарій, а чи є місце в IT для не технічних професій?'
+    },
+    {
+      themes: 'Як оцінити свій рівень?'
+    },
+    {
+      themes: 'Курси або самоосвіта?'
+    },
+    {
+      themes: 'Яким має бути резюме, як його скласти, як почати шукати роботу?'
+    },
+    {
+      themes: 'Приймаюча сторона: як співпрацювати з рекрутерами (навіть, якщо ти інтроверт)?'
+    },
+    {
+      themes: 'Open-source і участь у ньому, чи є сенс?'
+    },
+    {
+      themes: 'Яку зарплату просити?'
+    },
+    {
+      themes: 'Як перевчитися і успішно свічнутися?'
+    },
+    {
+      themes: 'Де шукати співтовариство і допомогу у вирішенні питань?'
+    }
+  ]
+  %}
+
+<section class="themes-wrapper">
+  <div class="themes">
+    <h2 class="themes__title">
+      Теми
+    </h2>
+    <div class="themes__list">
+
+      {% for theme in list %}
+
+      <div class="themes__item">
+        <div class="themes__text">
+          {{theme.themes}}
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
 </section>

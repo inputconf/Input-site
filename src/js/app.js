@@ -1,3 +1,10 @@
-import sayHello from './lib/sayHello.js';
+import bodymovin from 'lottie-web';
+import logoAnimation from './data/data.json';
 
-sayHello();
+let logoAnim = bodymovin.loadAnimation({
+  container: document.getElementById('logo-animation-container'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  animationData: logoAnimation
+});

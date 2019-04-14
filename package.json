@@ -65,5 +65,8 @@
     "webpack-glsl-loader": "^1.0.1",
     "require-yaml": "^0.0.1",
     "lodash": "^4.3.0"
+  },
+  "dependencies": {
+    "lottie-web": "^5.5.1"
   }
 }

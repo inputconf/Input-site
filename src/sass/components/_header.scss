@@ -140,49 +140,6 @@
     }
 }
 
-@media screen and (max-width: 420px) {
-    .rhombus:nth-of-type(11) {
-        display: none;
-    }
-    .rhombus:nth-of-type(10) {
-        width: 100px;
-        height: 100px;
-    }
-    .rhombus:nth-of-type(9) {
-        width: 200px;
-        height: 200px;
-    }
-    .rhombus:nth-of-type(8) {
-        width: 300px;
-        height: 300px;
-    }
-    .rhombus:nth-of-type(7) {
-        width: 400px;
-        height: 400px;
-    }
-    .rhombus:nth-of-type(6) {
-        width: 500px;
-        height: 500px;
-    }
-    .rhombus:nth-of-type(5) {
-        width: 600px;
-        height: 600px;
-    }
-    .rhombus:nth-of-type(4) {
-        width: 700px;
-        height: 700px;
-    }
-    .rhombus:nth-of-type(3) {
-        display: none;
-    }
-    .rhombus:nth-of-type(2) {
-        display: none;
-    }
-    .rhombus:nth-of-type(1) {
-        display: none;
-    }
-}
-
 .header-content {
     width: 100%;
     height: 100%;
@@ -193,10 +150,13 @@
     align-items: center;
 }
 .header-menu {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .header-menu-list {
     display: flex;
+}
+.header-menu-list > li {
+    // overflow: hidden;
 }
 .header-menu-list > li > a {
     margin: 0px 20px 20px 20px;
@@ -204,6 +164,35 @@
     color: white;
     text-decoration: none;
     border-bottom: 2px solid #fff4;
+}
+.header-menu-list > li > a {
+    display: inline-block;
+    animation: moveInMenuAnimation 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
+}
+.header-menu-list > li:nth-of-type(1) > a {
+    animation-delay: 0.1s;
+}
+.header-menu-list > li:nth-of-type(2) > a {
+    animation-delay: 0.2s;
+}
+.header-menu-list > li:nth-of-type(3) > a {
+    animation-delay: 0.3s;
+}
+.header-menu-list > li:nth-of-type(4) > a {
+    animation-delay: 0.4s;
+}
+.header-menu-list > li:nth-of-type(5) > a {
+    animation-delay: 0.5s;
+}
+.header-menu-list > li:nth-of-type(6) > a {
+    animation-delay: 0.6s;
+}
+.header-menu-list > li:nth-of-type(7) > a {
+    animation-delay: 0.7s;
+}
+.header-menu-list > li:nth-of-type(8) > a {
+    animation-delay: 0.8s;
 }
 .header-menu-list > li > a:hover {
     color: red;
@@ -214,6 +203,7 @@
     width: 353px;
     height: 70px;
     margin-bottom: 5px;
+    animation: logoAnimation 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .header-logo > img {
     width: 100%;
@@ -226,6 +216,22 @@
     color: white;
     width: 470px;
 }
+.header-text-wrapper {
+    overflow: hidden;
+}
+.header-center-text > div > p {
+    animation: moveInAnimation 1s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.header-center-text > div:nth-of-type(1) > p {
+    animation-delay: 2.5s;
+}
+.header-center-text > div:nth-of-type(2) > p {
+    animation-delay: 2.6s;
+}
+.header-center-text > div:nth-of-type(3) > p {
+    animation-delay: 2.7s;
+}
+
 .header-bottom {
     display: flex;
     justify-content: space-between;
@@ -241,8 +247,10 @@
     margin: 0;
     color: #fff6;
     font-size: 16px;
+    animation: moveInButtomAnimation 1s 3.2s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
 }
-.header-bottom-right > p {
+.header-bottom-right {
     text-align: right;
 }
 .header-bottom-left > p > a,
@@ -259,11 +267,14 @@
 }
 .header-bottom-left > h3,
 .header-bottom-right > h3 {
+    line-height: 1.1;
     color: white;
     margin: 0;
     font-size: 35px;
+    animation: moveInButtomAnimation 1s 3.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
 }
-.header-bottom > button {
+.header-bottom-button {
     font-weight: bold;
     font-size: 16px;
     color: white;
@@ -275,8 +286,56 @@
     border: none;
     border-radius: 7px;
     transition: all 250ms ease-in-out;
+    animation: moveInButtonAnimation 1s 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
 }
-.header-bottom > button:hover {
+.header-bottom-button:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 13px 15px -10px #50b70077;
+}
+
+@keyframes logoAimation {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveInAnimation {
+    from {
+        transform: translateY(27px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveInMenuAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(57px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes moveInButtonAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(57px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes moveInButtomAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(57px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }

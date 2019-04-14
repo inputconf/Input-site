@@ -1,0 +1,70 @@
+.speakers {
+	background-color: #ccc;
+    padding: 40px 10px;
+
+    .h2-sections {
+        margin-bottom: 80px;
+    }
+}
+
+.link-wrapper {
+    max-width: 460px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.speakers-link {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: $black;
+    min-width: 100px;
+    max-width: 295px;
+    width: 100%;
+	font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+	background: #FFC700;
+	border-radius: 15px;
+	padding: 15px;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: calc(100% - 32px);
+        height: 3px;
+        background-color: #000;
+        opacity: .3;
+    }
+}
+
+.girl, .boy {
+    position: relative;
+        z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .speakers {
+        .h2-sections {
+            font-size: 44px;
+        }
+    }
+    .speakers-link {
+        top: -55px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .speakers-link {
+        max-width: calc(100% - 150px);
+        top: -74px;
+    }
+}

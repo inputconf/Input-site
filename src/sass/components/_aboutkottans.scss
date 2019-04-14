@@ -1,0 +1,94 @@
+.about-kottats {
+    padding: 40px 20px;
+}
+
+.photo-content {
+    display: inline-block;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 165px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item > img {
+    margin-right: -35px;
+}
+
+.photo-p {
+	font-size: 24px;
+	color: #808080;
+	letter-spacing: 0.01em;
+	text-shadow: 4px 4px 0 $white, 4px -4px 0 $white, -4px 4px 0 $white, -4px -4px 0 $white, 4px 0px 0 $white, 0px 4px 0 $white, -4px 0px 0 $white, 0px -4px 0 $white;
+}
+
+.name {
+	font-size: 26px;
+	color: #FF3500;
+    margin-bottom: 5%;
+    background-color: $white;
+
+    span {
+        color: $black;
+    }
+}
+
+.red-btn-wrapper {
+	margin: 5% auto 20%;
+	display: block;
+    max-width: 410px;
+    width: 100%;
+}
+
+.about-link{
+    display: block;
+    width: 100%;
+	background: #FF5107;
+	box-shadow: 0px 4px 100px rgba(255, 81, 7, 0.25);
+	border-radius: 9px;
+    font-size: 26px;
+    text-decoration: none;
+	color: $white;
+	cursor: pointer;
+	border: none;
+	padding: 25px;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .about-kottats .h2-sections {
+        font-size: 44px;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .item > img {
+        margin-right: 0;
+    }
+
+	.photo-content {
+		position: relative;
+		width: 90%;
+		left: 10px;
+		margin-top: -40px;
+    }
+
+    .name, .photo-p {
+        background-color: $white;
+    }
+
+    .name {
+        display: inline;
+    }
+
+    .photo-p {
+        display: block;
+    }
+}

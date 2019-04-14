@@ -8,6 +8,13 @@
     line-height: 1.2;
     letter-spacing: 0.01em;
     margin-bottom: 50px;
+    @include r(900) {
+        font-size: 40px;
+    }
+
+    @include r(400) {
+        font-size: 30px;
+    }
 }
 
 .section-item {
@@ -15,37 +22,63 @@
     min-height: 215px;
     margin-bottom: 50px;
     padding: 30px 0 10px 95px;
-    background-repeat: no-repeat;
-    background-position: 17px top;
-    background-size: contain;
 
     &:nth-of-type(1) {
-        background-image: url("/img/svgo/1.svg");
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url("/img/svgo/1.svg") no-repeat;
         padding: 10px 0 20px 95px;
+        background-position: center, 17px top;
+        background-size: cover, 1;
     }
 
     &:nth-of-type(2) {
-        background-image: url("/img/svgo/2.svg");
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url("/img/svgo/2.svg") no-repeat;
+        background-position: center, 17px top;
+        background-size: cover, 1;
     }
 
     &:nth-of-type(3) {
-        background-image: url("/img/svgo/3.svg");
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url("/img/svgo/3.svg") no-repeat;
+        background-position: center, 17px top;
+        background-size: cover, 1;
     }
 
     &:nth-of-type(4) {
-        background-image: url("/img/svgo/4.svg");
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url("/img/svgo/4.svg") no-repeat;
+        background-position: center, 17px top;
+        background-size: cover, 1;
     }
 }
 
 .number-content {
     font-size: 44px;
-    font-weight: 400;
-    background-color: rgba($white, .9);
 }
 
 .number-content {
     h3 {
         font-size: 44px;
+        text-shadow: 4px 4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff,
+            -4px -4px 0 #fff, 4px 0px 0 #fff, 0px 4px 0 #fff, -4px 0px 0 #fff,
+            0px -4px 0 #fff;
     }
 }
 
@@ -54,25 +87,26 @@
         font-size: 24px;
         color: #808080;
         letter-spacing: 0.01em;
-        text-shadow: 4px 4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, -4px -4px 0 #fff, 4px 0px 0 #fff, 0px 4px 0 #fff, -4px 0px 0 #fff, 0px -4px 0 #fff;
+        text-shadow: 4px 4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff,
+            -4px -4px 0 #fff, 4px 0px 0 #fff, 0px 4px 0 #fff, -4px 0px 0 #fff,
+            0px -4px 0 #fff;
     }
 }
 
 @media screen and (max-width: 768px) {
     .sections {
-        padding: 0;
+        padding: 55px 0;
     }
-    .section-item, .section-item:nth-of-type(1) {
+    .section-item,
+    .section-item:nth-of-type(1) {
         padding: 30px 0 10px 150px;
-    }
-    .h2-sections {
-        font-size: 80px;
     }
 }
 
 @media screen and (max-width: 680px) {
-    .section-item, .section-item:nth-of-type(1) {
-        background-size: 35%;
+    .section-item,
+    .section-item:nth-of-type(1) {
+        // background-size: 35%;
         padding: 35% 0 0 0;
     }
 }

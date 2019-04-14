@@ -1,25 +1,36 @@
 .themes
 	text-align: center
 	min-height: 1000px
+	+r(1200)
+		min-height: 650px
+	+r(900)
+		min-height: 600px
 
 .themes__title
 	font-size: 80px
 	color: $white
 	font-weight: 700
 
-	+r(768)
+	+r(1200)
 		margin-bottom: 320px
+	+r(900) 
+		font-size: 40px
+	+r(400) 
+		font-size: 30px
 
 .themes-wrapper
 	//TODO: Change background to image
-	background: linear-gradient(100.38deg, #00E4FF 0%, #D200F4 47.75%, #D40000 93.55%)
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/header-bg-light.jpg)
+	background-size: cover
 	width: 100%
 	padding: 100px
 	position: relative
 	z-index: 1
 
-	+r(768)
+	+r(1200)
 		padding: 20px
+	+r(900) 
+		padding: 55px
 
 .themes-wrapper::after
 	content: ''
@@ -30,12 +41,16 @@
 	top: 0
 	left: 0
 	z-index: 2
-	background-image: url(/img/Themes_head.png)
+	background-image: url(/img/Hmm-on-dark.gif)
 	background-position: center center
 	background-repeat: no-repeat
+	background-size: 25%
 
-	+r(768)
-		background-position: center 140px
+	+r(1200)
+		background-position: center 130px
+		background-size: 300px
+	+r(900)
+		background-position: center 110px
 		background-size: 300px
 
 .themes__list
@@ -45,6 +60,8 @@
 	width: 100%
 	min-height: inherit
 	transform: rotate(0deg)
+	+r(1200)
+		max-width: 500px
 
 .themes__item
 	width: calc(100% / 3)
@@ -56,7 +73,7 @@
 	font-weight: 700
 	color: #FFCC4D
 
-	+r(768)
+	+r(1200)
 		margin-bottom: 35px
 
 .themes .themes__item
@@ -72,6 +89,8 @@
 		transform: none
 		transform-origin: inherit
 		width: 100%
+		text-align: left
+		font-size: 20px
 
 @for $i from 1 through 10
 	.themes__item:nth-child(#{$i})

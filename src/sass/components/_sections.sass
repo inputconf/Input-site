@@ -27,7 +27,7 @@
 			font-weight: 400;
 			position: absolute;
 			width: 80%;
-			left: 190px;
+			left: 220px;
 			margin-top: -40px;
 		}
 
@@ -39,12 +39,12 @@
 
 		.number-content {
 			p {
-				font: 24px "Monserrat", sans-serif;
-				color: #808080;
-				font-weight: 700;
-				letter-spacing: 0.01em;
-				background: #fff;
-				margin-top: -30px;
+			font: 24px "Monserrat", sans-serif;
+			color: #808080;
+			font-weight: 700;
+			letter-spacing: 0.01em;
+			text-shadow: 4px 4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, -4px -4px 0 #fff, 4px 0px 0 #fff, 0px 4px 0 #fff, -4px 0px 0 #fff, 0px -4px 0 #fff;
+			margin-top: -30px;
 			}
 		}
 
@@ -53,9 +53,38 @@
 		}
 
 
-@media screen and (max-width: 900px) {	
+
+@media screen and (max-width: 1152px) {
 	.number-content {
-		width: 60%;
+			width: 70%;
+		}
 	}
-}			
+
+@media screen and (max-width: 900px) {	
+	.sections-wrapper { 
+			width: 100%;
+			margin: 0 auto;
+			padding: 2% 0 0 0;
+		}
+	.h2-sections { 
+			font-size: 48px;				
+ 		}
+ 	.number-content {
+			width: 80%;
+			left: 120px;
+		}	
+}
+
+@media screen and (max-width: 768px) {
+	.number-content {
+    		position: relative;
+    		width: 90%;
+    		left: 10px;    
+		}
+	.item > img {
+			display: none;
+		}	
+}
+
+			
 

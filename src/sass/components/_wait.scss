@@ -1,9 +1,13 @@
 .wait {
     padding: 80px;
 }
-//TODO: Add dark bakground
+
 .gradient {
-	background: linear-gradient(98.74deg, #011619 0%, #140117 47.75%, #150103 93.55%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("/img/header-bg-light.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .h2-text {
@@ -116,5 +120,8 @@
 @media screen and (max-width: 768px) {
 	.wait {
 		padding: 0;
-	}
+    }
+    .card {
+        max-width: 100%;
+    }
 }

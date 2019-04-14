@@ -51,7 +51,7 @@
       top: 120px;
       left: 355px;
       bottom: 120px;
-      
+
     }
     iframe{
 		opacity: 1;
@@ -208,7 +208,7 @@
       position: absolute;
       left: 42px;
       top: 22px;
-      
+
     }
     header h1 .icon{
       font-size: 47px;
@@ -409,7 +409,7 @@
     <h1><a href="http://riverco.de">
       <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg>
     </a></h1>
-    
+
     <div class="header__updated"><em>input</em> updated 14.04.2019, 1 pages</div>
     <nav class="types">
       <button data-mode="mobile" data-width="320">
@@ -434,28 +434,28 @@
   </header>
   <section>
     <ol class="pagelist">
-      
-      
+
+
           <li >
 
                 <a class="pagelist__title  is-active " target="_blank" href="page.html"><span>1.</span><em>page</em></a>
                 <a href="page.html" class="pagelist__url">
                   <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
                 </a>
-                
+
                 <div class="pagelist__progress">
-                  
+
                   <i style="width:50%"></i>
                 </div>
 
           </li>
-        
-  
+
+
     </ol>
   </section>
 
   <aside class="preview" id="preview-wrapper">
-    
+
     <iframe id="preview"  width="1600" height="600" src="page.html"  frameborder="0"></iframe>
     <footer>
       <p>Coded with ❤️ at <a href="http://riverco.de">Coderiver</a></p>
@@ -504,7 +504,7 @@
         // add innerdiv
         var inner = document.createElement("div");
         inner.style.width = "100%";
-        outer.appendChild(inner);        
+        outer.appendChild(inner);
 
         var widthWithScroll = inner.offsetWidth;
 
@@ -517,7 +517,7 @@
 
     [].forEach.call(previewButtons, function(button) {
       button.addEventListener('click', function(event) {
-      	
+
       	if(window.innerWidth < 780){return;}
         event.preventDefault();
         removeActive();
@@ -527,7 +527,7 @@
       }, false);
     });
 
-    
+
     var mode = 'wide';
     [].forEach.call(navs, function(nav) {
       nav.addEventListener('click', function(event) {
@@ -562,7 +562,7 @@
           iframe.style.transform = 'scale('+ 1 +')';
           iframe.style.height =  pheight + 'px';
 
-          
+
           return;
         }
         if(scaleH>1){scaleH = 1;}
@@ -591,8 +591,9 @@
 
     });
   </script>
-  
+
 </body>
 </html>
+
 
 

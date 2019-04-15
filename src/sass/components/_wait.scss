@@ -11,21 +11,29 @@
 }
 
 .h2-text {
-	font-size: 80px;
-	font-weight: 900;
+    font-size: 80px;
+    font-weight: 900;
     color: #fff;
     margin-bottom: 44px;
+    @include r(900) {
+        font-size: 40px;
+    }
+
+    @include r(400) {
+        font-size: 30px;
+    }
 }
 
 .card-wrapper {
-	display: flex;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
 .card {
-	max-width: 450px;
+    min-height: 610px;
+    max-width: 450px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -33,95 +41,91 @@
     color: #fff;
     font-weight: 900;
     padding: 40px;
-    font: 24px "Monserrat", sans-serif;
+    font-size: 24px;
     letter-spacing: 0.01em;
     border: 2px solid;
+    hyphens: auto;
 }
 
 .card-text {
-	font-size: 45px;
+    font-size: 45px;
     font-weight: 600;
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
 .card-first {
-	background: rgba(181, 66, 200, 0.15);
+    background: rgba(181, 66, 200, 0.15);
     border-color: rgba(180, 57, 200, 0.2);
 }
 
 .card-second {
-	background: rgba(106, 208, 239, 0.15);
-	border-color: rgba(106, 208, 239, 0.2);
+    background: rgba(106, 208, 239, 0.15);
+    border-color: rgba(106, 208, 239, 0.2);
 }
 
 .card-third {
-	background: rgba(255, 226, 11, 0.15);
-	border-color: rgba(255, 226, 11, 0.2);
+    background: rgba(255, 226, 11, 0.15);
+    border-color: rgba(255, 226, 11, 0.2);
 }
 
 .card-fourth {
-	background: rgba(105, 208, 34, 0.15);
-	border-color: rgba(105, 208, 34, 0.2);
+    background: rgba(105, 208, 34, 0.15);
+    border-color: rgba(105, 208, 34, 0.2);
 }
 
-.card  {
-	p {
-		font-weight: 900;
-	}
+.card {
+    p {
+        font-weight: 900;
+    }
 }
 
 .card-first {
-	p {
-		color: #ab56b3;
-	}
+    p {
+        color: #ab56b3;
+    }
 }
 
 .card-second {
-	p {
-		color: #59a4c1;
-	}
+    p {
+        color: #59a4c1;
+    }
 }
 
 .card-third {
-	p {
-		color: #d09553;
-	}
+    p {
+        color: #d09553;
+    }
 }
 
 .card-fourth {
-	p {
-		color: #99c17a;
-	}
+    p {
+        color: #99c17a;
+    }
 }
 
 @media screen and (max-width: 1060px) {
-	.card {
-        max-width: calc(100vw - 160px);
-        width: 100%;
+    .card {
         margin-bottom: 40px;
-
-        img {
-            display: block;
-            margin: 0 auto;
-        }
     }
     .card-wrapper {
         margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h2-text {
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 800px) {
-	.card-text {
-		font-size: 30px;
-	}
+    .card-text {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-	.wait {
-		padding: 0;
-    }
-    .card {
-        max-width: 100%;
+    .wait {
+        padding: 55px 0;
     }
 }

@@ -22,6 +22,8 @@
     min-height: 215px;
     margin-bottom: 50px;
     padding: 30px 0 10px 95px;
+    background-position: center, 17px top;
+    background-size: cover, 1;
 
     &:nth-of-type(1) {
         background: linear-gradient(
@@ -29,10 +31,8 @@
                 rgba(255, 255, 255, 0.5),
                 rgba(255, 255, 255, 0.5)
             ),
-            url("/img/svgo/1.svg") no-repeat;
+            url("/img/1.svg") no-repeat;
         padding: 10px 0 20px 95px;
-        background-position: center, 17px top;
-        background-size: cover, 1;
     }
 
     &:nth-of-type(2) {
@@ -41,9 +41,7 @@
                 rgba(255, 255, 255, 0.5),
                 rgba(255, 255, 255, 0.5)
             ),
-            url("/img/svgo/2.svg") no-repeat;
-        background-position: center, 17px top;
-        background-size: cover, 1;
+            url("/img/2.svg") no-repeat;
     }
 
     &:nth-of-type(3) {
@@ -52,9 +50,7 @@
                 rgba(255, 255, 255, 0.5),
                 rgba(255, 255, 255, 0.5)
             ),
-            url("/img/svgo/3.svg") no-repeat;
-        background-position: center, 17px top;
-        background-size: cover, 1;
+            url("/img/3.svg") no-repeat;
     }
 
     &:nth-of-type(4) {
@@ -63,9 +59,7 @@
                 rgba(255, 255, 255, 0.5),
                 rgba(255, 255, 255, 0.5)
             ),
-            url("/img/svgo/4.svg") no-repeat;
-        background-position: center, 17px top;
-        background-size: cover, 1;
+            url("/img/4.svg") no-repeat;
     }
 }
 

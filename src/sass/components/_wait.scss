@@ -45,8 +45,11 @@
     letter-spacing: 0.01em;
     border: 2px solid;
     hyphens: auto;
+    line-height: 1.2;
 }
-
+.card > img {
+    height: 200px;
+}
 .card-text {
     font-size: 45px;
     font-weight: 600;

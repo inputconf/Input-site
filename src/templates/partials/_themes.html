@@ -31,7 +31,7 @@
       themes: 'Де шукати співтовариство і допомогу у вирішенні питань?'
     }
   ]
-  %}
+%}
 
 <section class="themes-wrapper" id="themes">
   <div class="themes">
@@ -39,18 +39,22 @@
       Теми
     </h2>
     <div class="themes__list">
-
       {% for theme in list %}
 
       <div class="themes__item">
         <div class="themes__text">
-          {{theme.themes}}
+          {{ theme.themes }}
         </div>
       </div>
 
       {% endfor %}
-
     </div>
-
+    <div class="themes__hmm-wrapper">
+      <img
+        class="themes__hmm-gif"
+        src="/img/Hmm-on-dark.gif"
+        alt="Hmm Gif"
+      />
+    </div>
   </div>
 </section>

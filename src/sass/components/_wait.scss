@@ -1,5 +1,9 @@
 .wait {
     padding: 80px;
+
+    @include r(768) {
+        padding: 55px 0;
+    }
 }
 
 .gradient {
@@ -15,12 +19,17 @@
     font-weight: 900;
     color: #fff;
     margin-bottom: 44px;
+
+    @include r(1060) {
+        text-align: center;
+    }
+
     @include r(900) {
         font-size: 40px;
     }
 
-    @include r(400) {
-        font-size: 30px;
+    @include r(320) {
+        font-size: 35px;
     }
 }
 
@@ -29,10 +38,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
+
+    @include r(1060) {
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .card {
-    min-height: 610px;
     max-width: 450px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -46,15 +60,43 @@
     border: 2px solid;
     hyphens: auto;
     line-height: 1.2;
+    min-height: 600px;
+
+    @include r(1060) {
+        margin-bottom: 40px;
+    }
+    @include r(540) {
+        margin-bottom: 20px;
+        padding: 30px 30px 40px 30px;
+        min-height: 500px;
+    }
+    @include r(320) {
+        padding: 20px 20px 30px 20px;
+        min-height: 400px;
+        font-size: 18px;
+    }
 }
 .card > img {
     height: 200px;
+
+    @include r(320) {
+        height: 150px;
+    }
 }
 .card-text {
     font-size: 45px;
     font-weight: 600;
     margin-top: 40px;
     margin-bottom: 10px;
+
+    @include r(800) {
+        font-size: 30px;
+    }
+    @include r(320) {
+        font-size: 27px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
 }
 
 .card-first {
@@ -104,31 +146,5 @@
 .card-fourth {
     p {
         color: #99c17a;
-    }
-}
-
-@media screen and (max-width: 1060px) {
-    .card {
-        margin-bottom: 40px;
-    }
-    .card-wrapper {
-        margin-bottom: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-    .h2-text {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .card-text {
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .wait {
-        padding: 55px 0;
     }
 }

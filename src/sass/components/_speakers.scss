@@ -1,8 +1,18 @@
 .speakers {
-    padding: 40px 10px;
+    padding: 70px 10px;
+    @include r(900) {
+        padding: 40px 10px;
+    }
 
     .h2-sections {
         margin-bottom: 80px;
+        line-height: 1;
+        @include r(768) {
+            font-size: 40px;
+        }
+        @include r(430) {
+            font-size: 30px;
+        }
     }
 }
 
@@ -14,6 +24,10 @@
     align-items: center;
     position: relative;
     z-index: 2;
+
+    @include r(768) {
+        max-width: 400px;
+    }
 }
 
 .speakers-link {
@@ -34,14 +48,14 @@
     padding: 15px;
     cursor: pointer;
 
-    &::after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: calc(100% - 32px);
-        height: 3px;
-        background-color: #000;
-        opacity: 0.3;
+    @include r(768) {
+        top: -45px;
+        font-size: 20px;
+        max-width: 235px;
+    }
+
+    @include r(430) {
+        top: -50px;
     }
 }
 
@@ -49,38 +63,4 @@
 .boy {
     position: relative;
     z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-    .speakers {
-        .h2-sections {
-            font-size: 40px;
-        }
-    }
-    .link-wrapper {
-        max-width: 400px;
-    }
-    .speakers-link {
-        top: -45px;
-        font-size: 20px;
-        max-width: 235px;
-        &::after {
-            width: calc(100% - 13px);
-        }
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .speakers {
-        .h2-sections {
-            font-size: 30px;
-        }
-    }
-    .speakers-link {
-        max-width: calc(100% - 150px);
-        top: -50px;
-        &::after {
-            width: calc(100% - 10px);
-        }
-    }
 }

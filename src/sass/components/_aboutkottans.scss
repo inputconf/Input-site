@@ -1,12 +1,17 @@
 .about-kottats {
-    padding: 40px 20px;
+    padding: 100px 20px;
+
+    @include r(900) {
+        padding: 40px 20px;
+    }
 }
 
 .about-kottats .h2-sections {
+    line-height: 1;
+
     @include r(900) {
         font-size: 40px;
     }
-
     @include r(400) {
         font-size: 30px;
     }
@@ -14,12 +19,24 @@
 
 .photo-content {
     display: inline-block;
+    align-self: flex-start;
+
+    @include r(768) {
+        position: relative;
+        width: 90%;
+        left: 10px;
+        margin-top: -40px;
+    }
 }
 
 .item {
     display: flex;
     align-items: center;
-    margin-bottom: 165px;
+    margin-bottom: 100px;
+
+    @include r(768) {
+        flex-direction: column;
+    }
 }
 
 .item:last-child {
@@ -29,6 +46,10 @@
 .item > img {
     margin-right: -35px;
     min-width: 200px;
+
+    @include r(768) {
+        margin-right: 0;
+    }
 }
 
 .photo-p {
@@ -38,32 +59,51 @@
     text-shadow: 4px 4px 0 $white, 4px -4px 0 $white, -4px 4px 0 $white,
         -4px -4px 0 $white, 4px 0px 0 $white, 0px 4px 0 $white,
         -4px 0px 0 $white, 0px -4px 0 $white;
+
+    @include r(768) {
+        background-color: $white;
+        display: block;
+    }
+    @include r(900) {
+        font-size: 18px;
+    }
 }
 
 .name {
     font-size: 26px;
     color: #ff3500;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
     background-color: $white;
 
     span {
         color: $black;
     }
+    @include r(900) {
+        font-size: 23px;
+    }
+    @include r(768) {
+        display: inline;
+    }
 }
 
 .red-btn-wrapper {
-    margin: 5% auto 20%;
+    margin: 0 auto 70px;
     display: block;
     max-width: 410px;
-    width: 100%;
+    width: 70%;
+    hyphens: none;
+
+    @include r(900) {
+        max-width: 330px;
+    }
 }
 
 .about-link {
     display: block;
     width: 100%;
     background: #ff5107;
-    box-shadow: 0px 20px 15px rgba(255, 81, 7, 0.25);
-    border-radius: 9px;
+    box-shadow: 0px 15px 15px rgba(255, 81, 7, 0.25);
+    border-radius: 15px;
     font-size: 26px;
     text-decoration: none;
     color: $white;
@@ -72,38 +112,12 @@
     padding: 25px;
     text-align: center;
     transition: all 300ms ease-in-out;
+
+    @include r(900) {
+        font-size: 18px;
+    }
 }
 .about-link:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0px 40px 25px rgba(255, 81, 7, 0.25);
-}
-
-@media screen and (max-width: 768px) {
-    .item {
-        flex-direction: column;
-    }
-
-    .item > img {
-        margin-right: 0;
-    }
-
-    .photo-content {
-        position: relative;
-        width: 90%;
-        left: 10px;
-        margin-top: -40px;
-    }
-
-    .name,
-    .photo-p {
-        background-color: $white;
-    }
-
-    .name {
-        display: inline;
-    }
-
-    .photo-p {
-        display: block;
-    }
 }

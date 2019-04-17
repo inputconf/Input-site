@@ -1,27 +1,26 @@
 .contacts-wrapper 
-	width: 100%
-	background-color: $black
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/header-bg-light.jpg)
+  background-size: cover, cover
   
  
   
 .contacts
-	font-weight: 700
+	font-weight: bold
 	padding-top: 55px
 	padding-bottom: 85px
 
 .contacts__title
   color: $white
   +r(900) 
-    font-size: 40px;
+    font-size: 40px
   +r(400) 
-    font-size: 30px;
+    font-size: 30px
 
 .contacts__text
   color: $contacts-text
   font-size: 24px
-  +r(530)
-    font-size: 14px
+  +r(900) 
+    font-size: 20px
 
 
 .contacts__text, .contacts__title
@@ -31,17 +30,17 @@
 .contacts__socials
   display: flex
   flex-direction: row
-  justify-content: space-evenly
+  justify-content: center
   padding-top: 35px  
-  flex-wrap:wrap
+  align-items: center	
 
-  +r(530)
-    justify-content: center
-    align-items: center		
+.contacts__socials-img 
+  width: 100%
+  padding: 0 10px
 
-.contacts__socials-img
-  +r(530)
-    width: 70%
+  +r(420)
+    padding: 0 5px
+
 
 
 

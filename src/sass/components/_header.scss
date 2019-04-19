@@ -179,10 +179,12 @@
 
     @include r(1040) {
         flex-direction: column;
-        opacity: 0;
         width: 100vw;
         height: 100vh;
         background-color: rgba($black, 0.9);
+        padding-top: 100px;
+        padding-left: 35px;
+        font-size: 20px;
     }
 }
 

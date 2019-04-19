@@ -334,10 +334,12 @@
     width: 353px;
     height: 70px;
     margin-bottom: 5px;
-    animation: logoAnimation 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation: logoAnimation 1s 2.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+        backwards;
 
     @include r(1040) {
         width: 60vw;
+        max-width: 400px;
         height: auto;
         margin: 0;
     }
@@ -348,7 +350,7 @@
 
 .header-center {
     @include r(1040) {
-        margin-top: calc(33px - 3vw);
+        margin-top: 23px;
     }
 }
 
@@ -433,7 +435,7 @@
     margin: 0;
     color: #fff6;
     font-size: 16px;
-    animation: moveInButtomAnimation 1s 3.2s cubic-bezier(0.215, 0.61, 0.355, 1)
+    animation: moveInButtomAnimation 1s 2.9s cubic-bezier(0.215, 0.61, 0.355, 1)
         backwards;
 
     @include r(460) {
@@ -467,7 +469,7 @@
     color: white;
     margin: 0;
     font-size: 35px;
-    animation: moveInButtomAnimation 1s 3.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+    animation: moveInButtomAnimation 1s 3s cubic-bezier(0.215, 0.61, 0.355, 1)
         backwards;
 
     @include r(460) {
@@ -486,7 +488,7 @@
     border: none;
     border-radius: 7px;
     transition: all 250ms ease-in-out;
-    animation: moveInButtonAnimation 1s 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+    animation: moveInButtonAnimation 1s 2.8s cubic-bezier(0.215, 0.61, 0.355, 1)
         backwards;
 
     @include r(1040) {
@@ -559,12 +561,12 @@
     }
 }
 
-@keyframes logoAimation {
+@keyframes logoAnimation {
     from {
-        transform: scale(0.5);
+        transform: translateY(40px);
     }
     to {
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 

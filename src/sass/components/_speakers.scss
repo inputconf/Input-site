@@ -17,17 +17,13 @@
 }
 
 .link-wrapper {
-    max-width: 460px;
+    max-width: 400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
-
-    @include r(768) {
-        max-width: 400px;
-    }
 }
 
 .speakers-link {
@@ -61,6 +57,7 @@
 
 .girl,
 .boy {
+    max-height: 100px;
     position: relative;
     z-index: 2;
 }

@@ -480,7 +480,8 @@
     font-weight: bold;
     font-size: 18px;
     color: $white;
-    width: 144px;
+    max-width: 210px;
+    width: 100%;
     height: 47px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
         linear-gradient(94.81deg, #b2f000 0%, #58c207 47.92%, #00d287 100%);

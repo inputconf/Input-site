@@ -116,16 +116,3 @@
         display: block;
     }
 }
-
-.organizers__join {
-    width: 50%;
-    max-width: 200px;
-    background-color: transparent;
-    border: none;
-    margin: 0 auto;
-    display: block;
-    margin-top: 80px;
-}
-.organizers__join:hover .organizers__join-button-rect {
-    fill-opacity: 0.1;
-}

@@ -163,6 +163,7 @@
     @include r(1040) {
         transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: translateY(0);
+        z-index: 4; 
     }
 }
 

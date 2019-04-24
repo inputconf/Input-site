@@ -24,7 +24,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../../img/header-bg-light.jpg);
+    background-image: url(/img/header-bg-light.jpg);
     background-size: 100% 100%;
 }
 .rhombuses-darkus {
@@ -144,6 +144,7 @@
 }
 .header-menu {
     margin-bottom: 20px;
+    z-index: 5;
 
     @include r(1040) {
         margin-left: -50px;
@@ -261,7 +262,6 @@
 .header-menu-list > li:nth-of-type(8) > a {
     animation-delay: 0.8s;
 }
-
 .header-menu-list > li:nth-of-type(8) > a {
     transition-delay: 15ms;
 }
@@ -286,12 +286,10 @@
 .header-menu-list > li:nth-of-type(1) > a {
     transition-delay: 120ms;
 }
-
 .header-menu-list > li > a:hover {
     color: red;
     border-bottom: 2px solid #f006;
 }
-
 .header-menu-active .header-menu-list > li:nth-of-type(1) > a {
     animation-delay: 0.1s;
     transition-delay: 15ms;
@@ -328,7 +326,6 @@
     color: red;
     border-bottom: 2px solid #f006;
 }
-
 .header-logo {
     margin: 0 auto;
     width: 353px;
@@ -342,18 +339,18 @@
         max-width: 400px;
         height: auto;
         margin: 0;
+        position: relative;
+        z-index: 5;
     }
 }
 .header-logo > img {
     width: 100%;
 }
-
 .header-center {
     @include r(1040) {
         margin-top: 23px;
     }
 }
-
 .header-center-text {
     text-align: center;
     font-size: 20px;
@@ -406,7 +403,6 @@
 .header-center-text > div:nth-of-type(3) > p {
     animation-delay: 2.7s;
 }
-
 .header-bottom {
     display: flex;
     justify-content: space-between;
@@ -501,12 +497,10 @@
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 13px 15px -10px #50b70077;
 }
-
 //Mobile menu
 .hamburger {
     display: none;
     width: 35px;
-    height: 50;
     position: absolute;
     top: 30px;
     right: 35px;
@@ -524,7 +518,7 @@
 
 .hamburger-item {
     height: 4px !important;
-    background-color: #ffffff;
+    background-color: $white;
     display: block;
     margin-bottom: 8px;
     transition: all 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -559,6 +553,10 @@
             transform: translate(0, -12.5px) rotate(-45deg) !important;
         }
     }
+}
+
+#addeventatc1 {
+    z-index: 2!important;
 }
 
 @keyframes logoAnimation {

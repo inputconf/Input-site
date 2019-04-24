@@ -416,10 +416,13 @@
         align-items: flex-start;
     }
 }
+.header-bottom-right,
+.header-bottom-button,
+.header-bottom-left {
+    flex-grow: 1;
+}
 .header-bottom-left,
 .header-bottom-right {
-    max-width: 410px;
-
     @include r(1040) {
         order: 2;
         text-align-last: left;

@@ -46,6 +46,7 @@
 .item > img {
     margin-right: -35px;
     min-width: 200px;
+    flex-shrink: 0;
 
     @include r(768) {
         margin-right: 0;

@@ -1,0 +1,38 @@
+{% set info = [
+  {
+    img: '/img/partners/star.svg',
+    link: 'https://star.global/',
+    name: 'Star',
+    role: 'Тривала підтримка',
+    text: 'Star creates an integrated, seamless workflow – no matter how long or complex the client journey'
+  },
+  {
+    img: '/img/partners/rr.svg',
+    link: 'https://railsreactor.com/',
+    name: 'Rails Reactor',
+    role: 'Тривала підтримка',
+    text: 'Rails Reactor інвестує в освіту професійного ІТ ком'юніті шляхом хостингу зустрічей, семінарів та хакатонів, у тому числі, під брендом Meetup Tonight'
+  }
+]
+%}
+
+<section class="partnres" id="partners">
+    <div class="container">
+      <h2 class="partners__title">
+        Партнери
+      </h2>
+      <div class="partners__grid">
+
+        {% for data in info %}
+          <div class="partners__item">
+            <img src="{{data.img}}" alt="{{data.name}}" class="partners__img">
+            <h3 class="partners__name">
+              <a href= "{{data.name}}" class="partners__link">{{data.name}}</a>
+            </h3>
+            <p class="partners__role">{{data.role}} <a href="https://kottans.org/" class="kottans">Kottans</a></p>
+            <p class="partners__description">{{data.text}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>

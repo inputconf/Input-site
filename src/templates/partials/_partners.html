@@ -1,38 +1,67 @@
-{% set info = [
-  {
-    img: '/img/partners/star.svg',
-    link: 'https://star.global/',
-    name: 'Star',
-    role: 'Тривала підтримка',
-    text: 'Star creates an integrated, seamless workflow – no matter how long or complex the client journey'
-  },
-  {
-    img: '/img/partners/rr.svg',
-    link: 'https://railsreactor.com/',
-    name: 'Rails Reactor',
-    role: 'Тривала підтримка',
-    text: 'Rails Reactor інвестує в освіту професійного ІТ ком'юніті шляхом хостингу зустрічей, семінарів та хакатонів, у тому числі, під брендом Meetup Tonight'
-  }
-]
-%}
-
 <section class="partnres" id="partners">
     <div class="container">
-      <h2 class="partners__title">
+      <h2 class="h2-sections">
         Партнери
       </h2>
       <div class="partners__grid">
 
-        {% for data in info %}
           <div class="partners__item">
-            <img src="{{data.img}}" alt="{{data.name}}" class="partners__img">
+            <div class="parnters__logo">
+              {{mixins.icon('star')}}
+            </div>
             <h3 class="partners__name">
-              <a href= "{{data.name}}" class="partners__link">{{data.name}}</a>
+              <a href= "https://star.global/" class="partners__link">Star</a>
             </h3>
-            <p class="partners__role">{{data.role}} <a href="https://kottans.org/" class="kottans">Kottans</a></p>
-            <p class="partners__description">{{data.text}}</p>
+            <p class="partners__role">Тривала підтримка
+                <a href="https://kottans.org/" class="kottans">Kottans</a>
+            </p>
+            <p class="partners__description">
+              Star creates an integrated, seamless workflow – no matter how long or complex the client journey'
+            </p>
           </div>
-        {% endfor %}
+
+          <div class="partners__item">
+            <div class="parnters__logo">
+              {{mixins.icon('rr')}}
+            </div>
+            <h3 class="partners__name">
+              <a href= "https://railsreactor.com/" class="partners__link">Rails Reactor</a>
+            </h3>
+            <p class="partners__role">Тривала підтримка
+                <a href="https://kottans.org/" class="kottans">Kottans</a>
+            </p>
+            <p class="partners__description">
+              Rails Reactor інвестує в освіту професійного ІТ ком'юніті шляхом хостингу зустрічей, семінарів та хакатонів, у тому числі, під брендом "Meetup Tonight"
+            </p>
+          </div>
+
+          <div class="partners__item">
+            <div class="parnters__logo">
+              {{mixins.icon('innohub')}}
+            </div>
+            <h3 class="partners__name">
+              <a href= "https://innohub.innovecs.com/about-us/?lang=uk" class="partners__link">InnoHub</a>
+            </h3>
+            <p class="partners__role">Хостінг партнер</p>
+            <p class="partners__description">
+              Створений командою Innovecs, InnoHub покликаний надихати IT-спільноту до взаємодії та розвитку.
+            </p>
+          </div>
+
+          <div class="partners__item">
+            <div class="parnters__logo">
+              {{mixins.icon('dou')}}
+            </div>
+            <h3 class="partners__name">
+              <a href= "https://dou.ua/" class="partners__link">DOU.ua</a>
+            </h3>
+            <p class="partners__role">Інформаційний партнер</p>
+            <p class="partners__description">
+              DOU.ua — найбільша українська спільнота розробників. Наша аудитория — ИТ-специалисты, средний возраст 25 лет, чаще всего сотрудники аутсорсинг компаний, 85% из Украины.
+            </p>
+          </div>
+
       </div>
+      <a href="http://input.tilda.ws/partnering" class="partners__invite"></a>
     </div>
   </section>

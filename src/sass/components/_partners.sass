@@ -1,21 +1,24 @@
 .partnres
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/header-bg-light.jpg)
-	background-size: cover, cover
-	padding-top: 20px
-	padding-bottom: 20px
-	color: $white
+	background: linear-gradient(#ccc 10%, #fff 90%)
+	padding-top: 100px
+	padding-bottom: 100px
+	color: $black
+
+.partnres .container
+	text-align: center
 
 .partners__grid
 	display: flex
 	justify-content: center
 	flex-flow: row wrap
+	margin-bottom: 50px
 
 .partners__item
 	display: block
 	max-width: 45%
-	border: 3px solid $white
+	border: 3px solid $blue
 	text-align: center
-	padding: 20px
+	padding: 40px 20px
 	margin: 20px
 
 .partners__item
@@ -25,12 +28,29 @@
 	margin: 35px
 
 .partners__link
-	color: #208fdf
+	color: $blue
 	font-size: 22px
 
-.partners__link:hover, .kottans:hover
+.kottans
+	color: $blue
+
+.partners__link:hover, .kottans:hover, .partners__invite:hover
 	text-decoration: none
 	color: $red
 
-.icon-star
-	fill: $white
+.partners__invite
+	max-width: 450px
+	width: 100%
+	padding: 25px 80px
+	font-size: 18px
+	text-align: center
+	color: blue
+	border: 2px solid $blue
+	will-change: color
+
+.partners__invite:hover
+	color: $red
+	border-color: $red
+	transition: color .3s ease-in
+
+

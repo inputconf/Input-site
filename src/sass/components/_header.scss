@@ -420,6 +420,7 @@
 .header-bottom-button,
 .header-bottom-left {
     flex-grow: 1;
+    width: 250px;
 }
 .header-bottom-left,
 .header-bottom-right {
@@ -559,7 +560,7 @@
 }
 
 #addeventatc1 {
-    z-index: 2!important;
+    z-index: 2 !important;
 }
 
 @keyframes logoAnimation {

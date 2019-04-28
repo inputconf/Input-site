@@ -1,60 +1,132 @@
 {% import "partials/_mixins.html" as mixins %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="google-site-verification" content="E1fHb9bOCYm93Oa43O253uN4ZgZy0KU4WwMaJbMpiUA"/>
+    <meta charset="utf-8" />
+    <meta
+      name="google-site-verification"
+      content="E1fHb9bOCYm93Oa43O253uN4ZgZy0KU4WwMaJbMpiUA"
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138995067-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138995067-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-138995067-1');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-138995067-1");
     </script>
 
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
-    <meta name="description" content="{{ description }}"/>
-    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#fff"/>
-    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
 
-    <link rel="preload" href="img/header-bg-light.jpg" as="image">
-    <link rel="stylesheet" media="all" href="css/app.css"/>
-    {% include "partials/snippets/_criticalcss.html" %}
+    <link rel="preload" href="img/header-bg-light.jpg" as="image" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+    <!-- {% include "partials/snippets/_criticalcss.html" %} -->
 
     <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:700&amp;subset=cyrillic" as="fetch" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Montserrat:700&amp;subset=cyrillic"
+      as="fetch"
+      crossorigin="anonymous"
+    />
 
     <!-- AddEvent script -->
-    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script
+      type="text/javascript"
+      src="https://addevent.com/libs/atc/1.6.1/atc.min.js"
+      async
+      defer
+    ></script>
 
     <script type="text/javascript">
-      !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Montserrat:700&amp;subset=cyrillic",r="__3perf_googleFonts_e8ec4";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage);
+      !(function(e, n, t) {
+        "use strict";
+        var o =
+            "https://fonts.googleapis.com/css?family=Montserrat:700&amp;subset=cyrillic",
+          r = "__3perf_googleFonts_e8ec4";
+        function c(e) {
+          (n.head || n.body).appendChild(e);
+        }
+        function a() {
+          var e = n.createElement("link");
+          (e.href = o), (e.rel = "stylesheet"), c(e);
+        }
+        function f(e) {
+          if (!n.getElementById(r)) {
+            var t = n.createElement("style");
+            (t.id = r), c(t);
+          }
+          n.getElementById(r).innerHTML = e;
+        }
+        e.FontFace && e.FontFace.prototype.hasOwnProperty("display")
+          ? (t[r] && f(t[r]),
+            fetch(o)
+              .then(function(e) {
+                return e.text();
+              })
+              .then(function(e) {
+                return e.replace(
+                  /@font-face {/g,
+                  "@font-face{font-display:swap;"
+                );
+              })
+              .then(function(e) {
+                return (t[r] = e);
+              })
+              .then(f)
+              .catch(a))
+          : a();
+      })(window, document, localStorage);
     </script>
     <!-- End of code snippet for Google Fonts -->
 
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#000" />
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000" />
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
 
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
-
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
@@ -64,6 +136,5 @@
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
-
   </body>
 </html>

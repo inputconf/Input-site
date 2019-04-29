@@ -122,6 +122,9 @@
 .card {
     p {
         font-weight: 900;
+        @include r(460) {
+            font-size: 18px;
+        }
     }
 }
 

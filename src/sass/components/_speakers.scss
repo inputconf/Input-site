@@ -43,6 +43,8 @@
     border-radius: 15px;
     padding: 15px;
     cursor: pointer;
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 10px 10px -10px rgba(255, 238, 0, 0.5);
 
     @include r(768) {
         top: -45px;
@@ -52,6 +54,11 @@
 
     @include r(430) {
         top: -50px;
+    }
+
+    &:hover {
+        transform: translateX(-50%) translateY(-5px) scale(1.01);
+        box-shadow: 0 15px 20px -10px rgba(255, 238, 0, 0.5);
     }
 }
 

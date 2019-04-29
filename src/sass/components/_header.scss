@@ -142,9 +142,19 @@
         padding: 0 20px 50px;
     }
 }
+.header-top-spacer {
+    height: 130px;
+
+    @include r(1040) {
+        display: none;
+    }
+}
 .header-menu {
     margin-bottom: 20px;
     z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     @include r(1040) {
         margin-left: -50px;
@@ -182,11 +192,14 @@
 
 .header-menu-list {
     display: flex;
+    justify-content: center;
+    background-color: #000d;
     width: 100%;
     overflow: hidden;
 
     @include r(1040) {
         flex-direction: column;
+        justify-content: flex-start;
         width: 100vw;
         height: 100vh;
         padding-top: 120px;
@@ -208,6 +221,28 @@
     }
 }
 
+@supports (
+    (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))
+) {
+    .header-menu-list {
+        backdrop-filter: blur(15px);
+        background-color: #0009;
+    }
+}
+
+.header-menu-list > li > a.buy-a-ticket {
+    border-radius: 7px;
+    margin-top: 8px;
+    padding: 3px 10px;
+    background-color: hsla(130, 100%, 50%, 0.3);
+    border-bottom: none;
+}
+.header-menu-list > li > a.buy-a-ticket:hover {
+    color: black;
+    border-bottom: none;
+    background-color: hsla(130, 100%, 50%, 0.7);
+}
+
 .header-menu-active .header-menu-list {
     @include r(1040) {
         display: block;
@@ -216,12 +251,12 @@
 }
 
 .header-menu-list > li > a {
-    margin: 0px 15px 20px 15px;
+    margin: 10px 15px 10px 15px;
     font-size: 16px;
     color: white;
     text-decoration: none;
     border-bottom: 2px solid #fff4;
-    display: inline-block;
+    display: block;
     animation: moveInMenuAnimation 1s cubic-bezier(0.215, 0.61, 0.355, 1)
         backwards;
     @include r(1040) {
@@ -416,8 +451,8 @@
         align-items: flex-start;
     }
 }
+
 .header-bottom-right,
-.header-bottom-button,
 .header-bottom-left {
     flex-grow: 1;
     width: 250px;
@@ -476,7 +511,30 @@
         font-size: 25px;
     }
 }
+
+.header-bottom-center {
+    @include r(1040) {
+        order: 1;
+        margin-bottom: 15px;
+    }
+}
+.header-bottom-subtext {
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    animation: moveInButtonAnimation 1s 2.9s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
+    @include r(1040) {
+        text-align: left;
+    }
+}
+
 .header-bottom-button {
+    text-decoration: none;
+    text-align: center;
+    line-height: 47px;
+    display: block;
     font-weight: bold;
     font-size: 18px;
     color: $white;
@@ -491,16 +549,13 @@
     transition: all 250ms ease-in-out;
     animation: moveInButtonAnimation 1s 2.8s cubic-bezier(0.215, 0.61, 0.355, 1)
         backwards;
-
-    @include r(1040) {
-        order: 1;
-        margin-bottom: 15px;
-    }
+    box-shadow: 0 8px 6px -5px #50b70077;
 }
 .header-bottom-button:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 13px 15px -10px #50b70077;
 }
+
 //Mobile menu
 .hamburger {
     display: none;

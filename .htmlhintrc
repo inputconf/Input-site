@@ -1,5 +1,5 @@
 {
-    "attr-lowercase": ["viewBox", "stdDeviation", "gradientUnits"],
+    "attr-lowercase": ["viewBox", "stdDeviation", "gradientUnits", "preserveAspectRatio", "gradientTransform"],
     "tagname-lowercase": false,
     "attr-value-double-quotes": false,
     "attr-no-duplication": true,

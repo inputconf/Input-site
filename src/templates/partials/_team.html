@@ -1,3 +1,106 @@
+{% set
+  rows = [
+    [
+      { 
+        position: "Ідея", 
+        people: [
+          {
+            name: "Олексій Руденко",
+            link: "fb.me/oleksiy.rudenko.5"
+          }
+        ]
+      }, { 
+        position: "Дизайнери", 
+        people: [
+          {
+            name: "Денис Лук'яненко",
+            link: "https://t.me/thedenoff"
+          },
+          {
+            name: "Юлія Бекеньова",
+            link: "https://t.me/yulyasystem"
+          }
+        ]
+      }, { 
+        position: "Копірайтери", 
+        people: [
+          {
+            name: "Андрій Цапко",
+            link: "fb.me/andrew.tsapko"
+          }, 
+          {
+            name: "Марія Федірко",
+            link: "fb.me/skavica"
+          }
+        ]
+      }, { 
+        position: "Головний коттан", 
+        people: [
+          {
+            name: "Артем Сичов",
+            link: "https://twitter.com/ArtemSuchov"
+          }
+        ]
+      }
+    ],
+    [
+      { 
+        position: "Верстальники", 
+        people: [
+          {
+            name: "Олександр Островний",
+            link: "https://twitter.com/Alex_Ostrovny"
+          },
+          {
+            name: "Денис Лук'яненко",
+            link: "https://t.me/thedenoff"
+          },
+          {
+            name: "Юлія Бекеньова",
+            link: "https://t.me/yulyasystem"
+          },
+          {
+            name: "Олена Драган",
+            link: "https://github.com/lenadgit"
+          }
+        ]
+      }, { 
+        position: "Маркетологи", 
+        people: [
+          {
+            name: "Ярік Гармаш",
+            link: "fb.me/yarik.garmash"
+          }, 
+          {
+            name: "Богдан Ковальчук",
+            link: "fb.me/bohdan.kovalchuk.589"
+          }
+        ]
+      }, { 
+        position: "Менеджери", 
+        people: [
+          {
+            name: "Анна Алімова",
+            link: "https://twitter.com/annyamilo"
+          }, 
+          {
+            name: "Максим Калашник",
+            link: "fb.me/mkalashnyk"
+          }
+        ]
+      }, { 
+        position: "PR", 
+        people: [
+          {
+            name: "Альона Кузнецова",
+            link: "https://www.facebook.com/profile.php?id=100009678078745"
+          }
+        ]
+      }
+    ]
+  ]
+%}
+
 <section class = "our-team" id="team">
 	<div class="photo-wrapper">
     <h2 class = "heading-team">Наша команда</h2>
@@ -7,19 +110,22 @@
   </div>
   <div class = "wrapper-links">
     <div class = "inner-links">
-      <p class="member"><a href="https://twitter.com/OleksiyRudenko" class="member-link">Олексій Руденко</a> - Арт-директор</p>
-      <p class="member"><a href="https://twitter.com/thedenoff" class="member-link">Денис Лук'яненко</a> - Дизайнер/Верстальник</p>
-      <p class="member"><a href="https://twitter.com/yulyasystem" class="member-link">Юлія Бекеньова</a> - Дизайнер/Верстальник</p>
-      <p class="member"><a href="https://twitter.com/tsapkoandrey" class="member-link">Андрій Цапко</a> - Копірайтер</p>
-      <p class="member"><a href="https://twitter.com/fedirkomary" class="member-link">Марія Федірко</a> - Копірайтер</p>
-      <p class="member"><a href="https://twitter.com/ArtemSuchov" class="member-link">Артем Сичов</a> - Головний Коттан</p>
-      <p class="member"><a href="https://twitter.com/Alex_Ostrovny" class="member-link">Олександр Островний</a> - Верстальник</p>
-      <p class="member"><a href="https://github.com/lenadgit" class="member-link">Олена Драган</a> - Верстальник</p>
-      <p class="member"><a href="https://twitter.com/feroxes" class="member-link">Ярік Гармаш</a> - Маркетолог</p>
-      <p class="member"><a href="https://github.com/iamsokol" class="member-link">Дмитрий, а вообще Влад</a> - Розробник</p>
-      <p class="member"><a href="https://twitter.com/annyamilo" class="member-link">Анна Алімова</a> - Менеджер</p>
-      <p class="member"><a href="https://twitter.com/maks_kalashnyk" class="member-link">Максим Калашник</a> - Менеджер</p>
-      <p class="member"><a href="https://www.facebook.com/profile.php?id=100009678078745" class="member-link">Альона Кузнецова</a> - PR</p>
+
+      {% for row in rows %}
+
+      <div class = "row">
+        {% for column in row %}
+        <div class = "column">
+          <h3>{{ column.position }}</h3>
+          {% for person in column.people %}
+            <a href={{ person.link }}>{{ person.name }}</a>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+
+      {% endfor %}
+
     </div>
   </div>
 </section>

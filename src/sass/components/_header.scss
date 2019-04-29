@@ -143,7 +143,7 @@
     }
 }
 .header-top-spacer {
-    height: 130px;
+    height: 110px;
 
     @include r(1040) {
         display: none;
@@ -559,7 +559,7 @@
         backwards;
     box-shadow: 0 8px 6px -5px #50b70077;
 }
-.header-bottom-link:hover {
+.header-bottom-button:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 13px 15px -10px #50b70077;
 }
@@ -570,12 +570,15 @@
     width: 35px;
     position: absolute;
     top: 30px;
-    right: 35px;
+    right: 40px;
     z-index: 10;
     cursor: pointer;
 
     @include r(1040) {
         display: block;
+    }
+    @include r(460) {
+        right: 20px;
     }
 
     &:hover .hamburger-item {

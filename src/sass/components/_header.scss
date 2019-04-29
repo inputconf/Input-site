@@ -262,6 +262,12 @@
 .header-menu-list > li:nth-of-type(8) > a {
     animation-delay: 0.8s;
 }
+.header-menu-list > li:nth-of-type(9) > a {
+    animation-delay: 0.9s;
+}
+.header-menu-list > li:nth-of-type(9) > a {
+    transition-delay: 0;
+}
 .header-menu-list > li:nth-of-type(8) > a {
     transition-delay: 15ms;
 }
@@ -419,7 +425,7 @@
 .header-bottom-right,
 .header-bottom-link,
 .header-bottom-left {
-    flex-grow: 1;
+    flex: 1 0 33%;
 }
 .header-bottom-left,
 .header-bottom-right {
@@ -476,7 +482,7 @@
     }
 }
 .header-bottom-link {
-    font-weight: bold;
+    display: block;
     font-size: 18px;
     color: $white;
     max-width: 210px;

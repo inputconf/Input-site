@@ -1,11 +1,9 @@
 .partnres
-	background: linear-gradient(#ccc 10%, #fff 90%)
+	background: linear-gradient(#fcc 10%, #ccf 90%)
 	padding-top: 100px
 	padding-bottom: 100px
 	color: $black
 
-.partnres .container
-	text-align: center
 
 .partners__grid
 	display: flex
@@ -15,17 +13,26 @@
 
 .partners__item
 	display: block
-	max-width: 45%
-	border: 3px solid $blue
-	text-align: center
-	padding: 40px 20px
+	flex: 1 1 300px
+	border-radius: 10px
+	border: 1px solid #fff9
+	padding: 40px 30px
 	margin: 20px
-
-.partners__item
+	background-color: #fff4
 	font-size: 18px
+	min-height: 500px
 
-.partners__name, .partners__role
-	margin: 35px
+.partners__logo > svg
+	max-height: 70px
+
+.partners__name
+	margin-top: 25px
+
+.partners__role
+	margin-bottom: 25px
+
+.partners__description
+	color: #0009
 
 .partners__link
 	color: $blue
@@ -39,18 +46,24 @@
 	color: $red
 
 .partners__invite
-	max-width: 450px
-	width: 100%
-	padding: 25px 80px
-	font-size: 18px
+	margin: 0 auto
 	text-align: center
-	color: blue
-	border: 2px solid $blue
-	will-change: color
+	display: block
+	max-width: 510px
+	width: calc(100% - 40px)
+	padding: 25px 40px
+	font-size: 18px
+	color: black
+	border-radius: 10px
+	border: 1px solid hsla(221, 50%, 66%, 1)
+	will-change: box-shadow transition
+	background-color: hsla(221, 80%, 76%, 1)
+	transition: all .2s ease-in
+	box-shadow: 0 15px 10px -10px hsla(221, 50%, 56%, 1)
 
 .partners__invite:hover
-	color: $red
-	border-color: $red
-	transition: color .3s ease-in
+	color: black
+	transform: translateY(-5px) scale(1.01)
+	box-shadow: 0 20px 20px -10px hsla(221, 50%, 56%, 1)
 
 

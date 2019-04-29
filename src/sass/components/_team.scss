@@ -100,13 +100,13 @@
     a {
         width: auto;
         margin: 4px 0;
-        color: #208fdf;
+        color: $blue;
         text-decoration: none;
         border-bottom: 1px solid #208fdf66;
 
         &:hover {
             color: red;
-            border-bottom: 1px solid #ff000066;
+            border-bottom: 1px solid $red;
         }
     }
 

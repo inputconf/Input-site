@@ -1,3 +1,44 @@
+{% set
+  list = [
+    {
+      class: 'contacts__socials-item',
+      link: 'https://www.facebook.com/inputconf/',
+      img: '/img/contacts/facebook.svg',
+      alt: 'Facebook icon'
+    },
+    {
+      class: 'contacts__socials-item',
+      link: 'https://t.me/inputconf',
+      img: '/img/contacts/telegram.svg',
+      alt: 'Telegram icon'
+    },
+    {
+      class: 'contacts__socials-item',
+      link: 'https://twitter.com/inputconf',
+      img: '/img/contacts/twitter.svg',
+      alt: 'Twitter icon'
+    },
+    {
+      class: 'contacts__socials-item',
+      link: 'mailto:input.conf@gmail.com',
+      img: '/img/contacts/mail.svg',
+      alt: 'Mail icon'
+    },
+    {
+      class: 'contacts__socials-item',
+      link: 'https://www.youtube.com/channel/UCygJxCJgNKns-EGttMqzGZQ',
+      img: '/img/contacts/youtube.svg',
+      alt: 'Youtube icon'
+    },
+    {
+      class: 'contacts__socials-item',
+      link: 'https://www.instagram.com/input.confer/',
+      img: '/img/contacts/insta.svg',
+      alt: 'Instagram icon'
+    }
+  ]
+  %}
+
 <section class="contacts-wrapper" id="contacts">
   <div class="container">
     <div class="contacts">
@@ -6,60 +47,19 @@
         Приєднуйтесь до соціальних мереж
       </div>
       <div class="contacts__socials">
-        <div class="contacts__socials-facebook">
-          <a
-            href="https://www.facebook.com/inputconf/"
-            class="contacts__socials-link"
-          >
-            <img
-              src="/img/facebook.svg"
-              alt="Facebook icon"
-              class="contacts__socials-img"
-            />
-          </a>
-        </div>
-        <div class="contacts__socials-telegram">
-          <a href="https://t.me/inputconf" class="contacts__socials-link">
-            <img
-              src="/img/telegram.svg"
-              alt="Telegram icon"
-              class="contacts__socials-img"
-            />
-          </a>
-        </div>
-        <div class="contacts__socials-twitter">
-          <a
-            href="https://twitter.com/inputconf"
-            class="contacts__socials-link"
-          >
-            <img
-              src="/img/twitter.svg"
-              alt="Twitter icon"
-              class="contacts__socials-img"
-            />
-          </a>
-        </div>
-        <div class="contacts__socials-mail">
-          <a href="mailto:input.conf@gmail.com" class="contacts__socials-link">
-            <img
-              src="/img/mail.svg"
-              alt="Mail icon"
-              class="contacts__socials-img"
-            />
-          </a>
-        </div>
-        <div class="contacts__socials-mail">
-          <a
-            href="https://www.youtube.com/channel/UCygJxCJgNKns-EGttMqzGZQ"
-            class="contacts__socials-link"
-          >
-            <img
-              src="/img/youtube.svg"
-              alt="Youtube icon"
-              class="contacts__socials-img"
-            />
-          </a>
-        </div>
+
+        {% for data in list %}
+          <div class="{{data.class}}">
+            <a href="{{data.link}}" class="contacts__socials-link">
+              <img
+                src="{{data.img}}"
+                alt="{{data.alt}}"
+                class="contacts__socials-img"
+              />
+            </a>
+          </div>
+        {% endfor %}
+
       </div>
     </div>
   </div>

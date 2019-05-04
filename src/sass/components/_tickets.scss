@@ -1,59 +1,147 @@
 .tickets {
-    padding: 70px 20px 100px;
+	padding-bottom: 50px;
 }
 
 .tickets .container {
-    max-width: 940px;
-    text-align: center;
+	max-width: 1200px;
+	text-align: center;
 }
 
-.tickets-row {
-    display: flex;
+.tickets .header-bottom-link {
+	display: block;
+	max-width: 300px;
+	width: 100%;
+	margin: 0 auto;
+	height: 60px;
+	font-size: 22px;
+	line-height: 60px;
 
-    @include r(800) {
-        flex-direction: column;
-        align-items: center;
-    }
+	@include r(767) {
+		max-width: 280px;
+	}
 }
-.tickets-row > a {
-    border-radius: 5%;
+
+.tickets-wrapper {
+	margin: 0 auto;
+	display: flex;
+	padding: 20px;
+	justify-content:space-between;
+
+	@include r(767) {
+		flex-direction: column;
+	}
+}
+
+.tickets-wrapper:last-of-type{
+	margin-bottom: 60px;
+}
+
+.ticket-item {
+	padding: 15px 15px 50px;
+	flex: 1 0;
+	max-width: 360px;
+	text-align: left;
+
+	@include r(767) {
+		width: 100%;
+		max-width: 100%;
+		margin: auto auto 35px;
+	}
+}
+
+.ticket-item:not(:last-child) {
+	margin-right: 20px;
+
+	@include r(767) {
+		margin: auto auto 35px;
+	}
+}
+
+.ticket-body, .ticket-footer {
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 7px $grey;
+    border: 1px solid #D1DEE6;
+}
+
+.ticket-body {
+    padding: 35px 30px;
     display: flex;
-    margin: 10px;
-    flex: 1 1 200px;
-    box-shadow: 0px 12px 10px rgba(18, 51, 90, 0.25);
-    transition: all 300ms ease-in-out;
-    max-width: 310px;
+    flex-flow: column nowrap;
+    min-height: 395px;
 }
-.tickets-row-big > a {
-    max-width: 460px;
+
+.ticket-footer {
+    min-height: 100px;
+    background-image: url(../img/tickets/barcode.png);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .img-wrapper {
-	max-height: 120px;
+    text-align: left;
+    min-height: 120px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img-wrapper-early {
+    background-image: url(../img/tickets/bird-1.png);
+}
+
+.img-wrapper-standart {
+    background-image: url(../img/tickets/bird-2.png);
+}
+
+.img-wrapper-owl {
+    background-image: url(../img/tickets/bird-3.png);
+}
+
+.ticket-title {
+    font-size: 25px;
+    line-height: 1.2;
 }
 
 .ticket-description {
-	font-size: 20px;
-	font-family: sans-serif;
-	font-weight: 400;
-	letter-spacing: -0.5px;
+	font-size: 18px;
+	font-family: inherit;
+    font-weight: 700;
+    color: rgba($black, 0.5);
+    margin-bottom: 40px;
 }
 
-.tickets-row > a > img {
-    width: 100%;
-    border-radius: 4%;
+.ticket-rebase {
+    display: block;
 }
 
-.ticket-5 {
-    position: relative;
+.supporter {
+	max-width: 100%;
 }
-.tickets-row > a > .ticket-5-bird {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 35%;
+
+.ticket-price {
+    max-width: 140px;
+    padding: 10px 15px;
+    font-size: 18px;
+	background: linear-gradient(180deg, #FFD337 0%, #FFC01E 100%);
+    border-radius: 10px;
+    margin-top: auto;
 }
-.tickets-row > a:hover {
-    transform: translateY(-15px) scale(1.01);
-    box-shadow: 0px 27px 30px rgba(18, 51, 90, 0.25);
+
+.ticket-price-standart {
+    background: linear-gradient(180deg, #CBFF2B 0%, #62D115 100%);
+}
+
+.ticket-price-owl {
+    background: linear-gradient(180deg, #F6E1D7 0%, #97816E 100%);
+}
+
+.ticket-price-value {
+    font-size: 32px;
+    display: block;
+    margin-top: -10px;
+}
+
+.ticket-descr {
+	font-size: 16px;
 }

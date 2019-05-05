@@ -186,6 +186,7 @@
     grid-template-columns: 140px 1fr;
     grid-template-rows: repeat(3, max-content);
     grid-column-gap: 10px;
+    min-height: 400px;
     background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
 }
 

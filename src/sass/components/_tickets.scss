@@ -5,20 +5,39 @@
 .tickets .container {
 	max-width: 1200px;
 	text-align: center;
+    padding-top: 50px;
 }
 
 .tickets .header-bottom-link {
-	display: block;
-	max-width: 300px;
-	width: 100%;
-	margin: 0 auto;
-	height: 60px;
-	font-size: 22px;
-	line-height: 60px;
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    font-size: 22px;
+    line-height: 60px;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    text-align: center;
+    background: linear-gradient(180deg, rgba($black, 0) 0%, $black 100%),
+        linear-gradient(94.81deg, #b2f000 0%, #58c207 47.92%, #00d287 100%);
+    background-blend-mode: overlay, normal;
+    border: none;
+    border-radius: 7px;
+    transition: all 250ms ease-in-out;
+    animation: moveInButtonAnimation 1s 2.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+        backwards;
+    box-shadow: 0 8px 6px -5px #50b70077;
 
 	@include r(767) {
 		max-width: 280px;
 	}
+}
+
+.header-bottom-link:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 13px 15px -10px #50b70077;
 }
 
 .tickets-wrapper {

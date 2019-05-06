@@ -1,0 +1,36 @@
+<svg viewBox="0 0 74 36" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x1="12.389" x2="12.389" y1="25.224" y2=".59776" gradientTransform="scale(.74191 1.3479)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#9ACA3C" offset="0"/>
+   <stop stop-color="#B7CA3F" offset=".1195"/>
+   <stop stop-color="#D1CA46" offset=".2687"/>
+   <stop stop-color="#E5CA4D" offset=".4257"/>
+   <stop stop-color="#F2C952" offset=".5919"/>
+   <stop stop-color="#FBC955" offset=".7737"/>
+   <stop stop-color="#FFC956" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" x1="18.953" x2="18.953" y1="67.986" y2="35.751" gradientTransform="scale(1.9415 .51508)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#1F6AB4" offset="0"/>
+   <stop stop-color="#2B79B2" offset=".08372"/>
+   <stop stop-color="#398DB1" offset=".2122"/>
+   <stop stop-color="#459FAF" offset=".3467"/>
+   <stop stop-color="#4EADAC" offset=".4871"/>
+   <stop stop-color="#55B7A8" offset=".6356"/>
+   <stop stop-color="#59BEA6" offset=".7979"/>
+   <stop stop-color="#5AC1A6" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g fill-rule="evenodd">
+  <path d="M 16.867,34.224 0,17.51 16.867,0.796 18.4,2.284 3.035,17.51 18.4,32.705 Z" fill="url(#a)"/>
+  <path d="M 55.747,35.816 44.916,25.11 34.084,35.816 17.821,19.742 2.347,35.067 0.8,33.538 17.821,16.714 34.084,32.789 44.916,22.083 55.747,32.789 71.253,17.495 72.8,18.993 Z" fill="url(#b)"/>
+  <path d="m19.2 1.592c0 0.881-0.714 1.592-1.6 1.592a1.593 1.593 0 0 1 0-3.184c0.886 0 1.6 0.71 1.6 1.592z" fill="#f4772e"/>
+  <ellipse cx="1.6" cy="17.51" rx="1.6" ry="1.592" fill="#c1b32d"/>
+  <ellipse cx="1.6" cy="34.242" rx="1.6" ry="1.592" fill="#1363a5"/>
+  <ellipse cx="18" cy="18.306" rx="2.4" ry="2.388" fill="#32bca9"/>
+  <ellipse cx="34.1" cy="34.392" rx="1.6" ry="1.592" fill="#1363a5"/>
+  <ellipse cx="44.9" cy="23.292" rx="1.6" ry="1.592" fill="#32bca9"/>
+  <ellipse cx="55.75" cy="34.392" rx="1.6" ry="1.592" fill="#1363a5"/>
+  <ellipse cx="71.2" cy="19.102" rx="2.4" ry="2.388" fill="#32bca9"/>
+  <path d="m20 34.242c0 0.881-0.714 1.592-1.6 1.592s-1.6-0.711-1.6-1.592 0.714-1.592 1.6-1.592 1.6 0.71 1.6 1.592z" fill="#4cb748"/>
+ </g>
+</svg>

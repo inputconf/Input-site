@@ -1,0 +1,54 @@
+{% set
+  list = [
+    {
+      img: 'fwdays.svg',
+      link: 'https://fwdays.com/',
+      name: 'fwdays',
+      text: "fwdays проводить якісні заходи для розробників, архітекторів, СТО, тім та тех лідів, менеджерів проектів і всіх, хто пов'язаний з IT"
+    },
+    {
+      img: 'from_ua.png',
+      link: 'https://from-ua.com/',
+      name: 'From-UA',
+      text: "Відоме українське інтернет-видання From-UA є одним з найбільш популярних інформаційно-аналітичних і розважальних мережевих ЗМІ України."
+    },
+    {
+      img: 'prnews.png',
+      link: 'https://prnews.io/',
+      name: 'PRNEWS.IO',
+      text: "PRNEWS.IO є одним з популярних інструментів з управління PR-активністю компанії в інтернеті. Заснована на концепції «все в одному вікні», PRNEWS.IO дозволяє бізнесу створювати і ділитися історіями з журналістами на власних умовах."
+    },
+    {
+      img: 'FrontEndDev.jpg',
+      link: 'https://t.me/front_end_dev',
+      name: 'front_end_dev',
+      text: "FrontEndDev - дайджест полезных материалов для front end разработчиков"
+    }
+  ]
+%}
+
+<div class="media-partners">
+  <h3 class="media-partners__title">
+    Медіа-партнери
+  </h3>
+  <div class="media-partners__grid">
+
+    {% for data in list %}
+      <div class="media-partners__item">
+        <div class="media-partners__logo">
+          <div class="media-partners__img" style="background-image:url(/img/partners/media/{{data.img}});"></div>
+        </div>
+        <div class="media-partners__name">
+          <a href="{{data.link}}" class="media-partners__link">
+            {{data.name}}
+          </a>
+        </div>
+        <div class="media-partners__text">
+          <p>
+            {{data.text}}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

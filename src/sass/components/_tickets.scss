@@ -161,6 +161,8 @@
 	background: linear-gradient(180deg, #FFD337 0%, #FFC01E 100%);
     border-radius: 10px;
     margin-top: auto;
+    text-decoration: none;
+    color: $black;
 }
 
 .ticket-price-standart {
@@ -188,6 +190,12 @@
     grid-column-gap: 10px;
     min-height: 400px;
     background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
+
+    @include r(490) {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+    }
+
 }
 
 .ticket-img {
@@ -201,10 +209,18 @@
 
 .supporter .ticket-img {
     background-size: 70%;
+
+    @include r(490) {
+        background-size: contain;
+    }
 }
 
 .supporter-ss .ticket-img {
     background-size: contain;
+
+    @include r(490) {
+        min-height: 160px;
+    }
 }
 
 .supporter .ticket-footer {
@@ -232,6 +248,11 @@
     grid-column: 2 / 3;
     grid-row: 2;
     padding-top: 20px;
+
+    @include r(490) {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
 }
 
 .ticket-set {
@@ -239,6 +260,11 @@
     grid-row: 3;
     font-size: 12px;
     line-height: 1.12;
+
+    @include r(490) {
+        grid-column: 1 / -1;
+        grid-row: 5;
+    }
 }
 
 .supporter .ticket-price {
@@ -246,6 +272,13 @@
     grid-row: 3;
     align-self: start;
     margin-top: 0;
+
+    @include r(490) {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .ticket-head {

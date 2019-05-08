@@ -2,12 +2,14 @@
     padding: 80px;
     hyphens: auto;
     line-height: 1.3;
+
     @include r(768) {
         padding: 55px 0;
     }
 }
 .sections > .container {
     padding: 0 40px;
+
     @include r(320) {
         padding: 0 20px;
     }
@@ -19,6 +21,7 @@
     line-height: 1.2;
     letter-spacing: 0.01em;
     margin-bottom: 50px;
+
     @include r(900) {
         font-size: 40px;
     }
@@ -39,39 +42,38 @@
     &:nth-of-type(1) {
         background: linear-gradient(
                 0deg,
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
+                rgba($white, 0.5),
+                rgba($white, 0.5)
             ),
-            url("/img/1.svg") no-repeat;
-        // padding: 10px 0 20px 95px;
+            url("/img/sections/1.svg") no-repeat;
         background-position: center, 25px top;
     }
 
     &:nth-of-type(2) {
         background: linear-gradient(
                 0deg,
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
+                rgba($white, 0.5),
+                rgba($white, 0.5)
             ),
-            url("/img/2.svg") no-repeat;
+            url("/img/sections/2.svg") no-repeat;
     }
 
     &:nth-of-type(3) {
         background: linear-gradient(
                 0deg,
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
+                rgba($white, 0.5),
+                rgba($white, 0.5)
             ),
-            url("/img/3.svg") no-repeat;
+            url("/img/sections/3.svg") no-repeat;
     }
 
     &:nth-of-type(4) {
         background: linear-gradient(
                 0deg,
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
+                rgba($white, 0.5),
+                rgba($white, 0.5)
             ),
-            url("/img/4.svg") no-repeat;
+            url("/img/sections/4.svg") no-repeat;
     }
 
     @include r(680) {
@@ -89,6 +91,7 @@
         text-shadow: 3px 3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff,
             -3px -3px 0 #fff, 3px 0px 0 #fff, 0px 3px 0 #fff, -3px 0px 0 #fff,
             0px -3px 0 #fff;
+
         @include r(900) {
             font-size: 30px;
         }
@@ -97,6 +100,7 @@
             font-size: 27px;
         }
     }
+
     p {
         font-size: 24px;
         color: #808080;
@@ -104,6 +108,7 @@
         text-shadow: 3px 3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff,
             -3px -3px 0 #fff, 3px 0px 0 #fff, 0px 3px 0 #fff, -3px 0px 0 #fff,
             0px -3px 0 #fff;
+
         @include r(900) {
             font-size: 20px;
         }

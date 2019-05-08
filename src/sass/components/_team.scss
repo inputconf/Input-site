@@ -15,6 +15,9 @@
 
 .heading-team {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
     margin-top: 5%;
     font-size: 80px;
     color: $white;

@@ -1,14 +1,14 @@
 .wait {
     padding: 80px;
 
-    @include r(768) {
+    @include r(767) {
         padding: 55px 0;
     }
 }
 
 .gradient {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url("/img/header-bg-light.jpg");
+    background: linear-gradient(0deg, rgba($black, 0.75), rgba($black, 0.75)),
+        url("../img/header/header-bg-light.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 .h2-text {
     font-size: 80px;
     font-weight: 900;
-    color: #fff;
+    color: $white;
     margin-bottom: 44px;
 
     @include r(1060) {
@@ -49,9 +49,6 @@
 .card {
     max-width: 450px;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
     color: #fff;
     font-weight: 900;
     padding: 40px;
@@ -65,17 +62,20 @@
     @include r(1060) {
         margin-bottom: 40px;
     }
+
     @include r(540) {
         margin-bottom: 20px;
         padding: 30px 30px 40px 30px;
         min-height: 500px;
     }
+
     @include r(320) {
         padding: 20px 20px 30px 20px;
         min-height: 400px;
         font-size: 18px;
     }
 }
+
 .card > img {
     height: 200px;
 
@@ -83,6 +83,7 @@
         height: 150px;
     }
 }
+
 .card-text {
     font-size: 45px;
     font-weight: 600;
@@ -92,6 +93,7 @@
     @include r(800) {
         font-size: 30px;
     }
+
     @include r(320) {
         font-size: 27px;
         margin-top: 20px;
@@ -122,6 +124,7 @@
 .card {
     p {
         font-weight: 900;
+
         @include r(460) {
             font-size: 18px;
         }

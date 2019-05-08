@@ -1,11 +1,12 @@
 .themes
 	text-align: center
 	min-height: 1000px
+
 	+r(1200)
 		min-height: 650px
+
 	+r(900)
 		min-height: 600px
-
 
 .themes__title
 	font-size: 80px
@@ -14,13 +15,15 @@
 
 	+r(1200)
 		margin-bottom: 30px
+
 	+r(900)
 		font-size: 40px
+
 	+r(400)
 		font-size: 30px
 
 .themes-wrapper
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/header-bg-light.jpg)
+	background: linear-gradient(0deg, rgba($black, 0.75), rgba($black, 0.75)), url(/img/header/header-bg-light.jpg)
 	background-size: cover
 	width: 100%
 	padding: 100px 100px 0px 100px
@@ -29,8 +32,10 @@
 
 	+r(1200)
 		padding: 20px 20px 55px 20px
+
 	+r(900)
 		padding: 40px
+
 	+r(320)
 		padding: 40px 20px
 
@@ -43,7 +48,7 @@
 	top: 0
 	left: 0
 	z-index: 2
-	background-image: url(/img/Hmm-on-dark.gif)
+	background-image: url(/img/themes/Hmm-on-dark.gif)
 	background-position: center 60%
 	background-repeat: no-repeat
 	background-size: 25%
@@ -52,30 +57,33 @@
 		background-position: center 130px
 		background-size: 300px
 		display: none
+
 	+r(900)
 		background-position: center 110px
 		background-size: 300px
 
 .themes__hmm-wrapper
-	background: linear-gradient((0deg, rgba(26, 16, 12, 1), rgba(26, 16, 12, 0.75), rgba(0, 0, 0, 0)))
+	background: linear-gradient((0deg, rgba(26, 16, 12, 1), rgba(26, 16, 12, 0.75), rgba($white, 0)))
 	z-index: 4
 	position: sticky
 	display: none
 	margin: -15px -55px 0px -55px
 	bottom: 0
+
 	+r(1200)
 		display: block
 		margin: -15px -20px 0px -20px
+
 	+r(900)
 		margin: -15px -40px 0px -40px
+
 	+r(320)
 		margin: -15px -20px 0px -20px
 
-.themes__hmm-gif 
+.themes__hmm-gif
 	width: 70%
 	margin: 0 auto
 	max-width: 30vh
-	
 
 .themes__list
 	position: relative
@@ -85,6 +93,7 @@
 	width: 100%
 	min-height: inherit
 	transform: rotate(0deg)
+
 	+r(1200)
 		max-width: 500px
 

@@ -1,10 +1,11 @@
 .organizers__wrapper {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url(../../img/header-bg-light.jpg);
+    background: linear-gradient(0deg, rgba($black, 0.75), rgba($black, 0.75)),
+        url(../img/header/header-bg-light.jpg);
     background-size: cover, cover;
 }
 .organizers__wrapper > .container {
     padding: 0 40px;
+
     @include r(320) {
         padding: 0 20px;
     }
@@ -68,6 +69,7 @@
         width: 50%;
         max-width: 200px;
     }
+
     @include r(400) {
         padding-bottom: 0;
     }

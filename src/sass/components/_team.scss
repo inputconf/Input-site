@@ -15,12 +15,15 @@
 
 .heading-team {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
     margin-top: 5%;
     font-size: 80px;
     color: $white;
     text-shadow: 0px 2px 0px #999, 0px 4px 0px #888, 0px 6px 0px #777;
 
-    @include r(768) {
+    @include r(767) {
         font-size: 44px;
     }
 
@@ -49,19 +52,6 @@
     position: relative;
     z-index: 2;
 
-    @include r(320) {
-        padding: 30px 30px;
-    }
-
-    @include r(920) {
-        background: linear-gradient(
-            rgb(216, 208, 193) 2%,
-            rgb(253, 252, 249) 8%,
-            rgba(255, 255, 255, 1) 13%,
-            rgba(255, 255, 255, 1)
-        );
-    }
-
     @include r(920) {
         background: linear-gradient(
             rgb(216, 208, 193) 2%,
@@ -69,6 +59,10 @@
             rgba(255, 255, 255, 1) 10%,
             rgba(255, 255, 255, 1)
         );
+    }
+
+    @include r(320) {
+        padding: 30px 30px;
     }
 }
 

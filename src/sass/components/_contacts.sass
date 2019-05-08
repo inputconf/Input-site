@@ -1,5 +1,5 @@
 .contacts-wrapper
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/header-bg-light.jpg)
+  background: linear-gradient(0deg, rgba($black, 0.75), rgba($black, 0.75)), url(../../img/header/header-bg-light.jpg)
   background-size: cover, cover
 
 .contacts
@@ -8,17 +8,19 @@
 
 .contacts__title
   color: $white
+
   +r(900)
     font-size: 40px
+
   +r(400)
     font-size: 30px
 
 .contacts__text
   color: $contacts-text
   font-size: 24px
+
   +r(900)
     font-size: 20px
-
 
 .contacts__text, .contacts__title
   text-align: center
@@ -43,14 +45,10 @@
   padding: 0 10px
   transform: scale(1)
   transition: transform .3s ease-in-out
+
   +r(420)
     padding: 0 5px
 
 .contacts__socials-img:hover
   transform: scale(1.1)
   transition: transform .3s ease-in-out
-
-
-
-
-

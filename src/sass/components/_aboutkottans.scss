@@ -12,16 +12,21 @@
     @include r(900) {
         font-size: 40px;
     }
+
     @include r(400) {
         font-size: 30px;
     }
+}
+
+.h2-sections-rebase {
+    display: block;
 }
 
 .photo-content {
     display: inline-block;
     align-self: flex-start;
 
-    @include r(768) {
+    @include r(767) {
         position: relative;
         width: 90%;
         left: 10px;
@@ -34,7 +39,7 @@
     align-items: center;
     margin-bottom: 100px;
 
-    @include r(768) {
+    @include r(767) {
         flex-direction: column;
     }
 }
@@ -48,7 +53,7 @@
     min-width: 200px;
     flex-shrink: 0;
 
-    @include r(768) {
+    @include r(767) {
         margin-right: 0;
     }
 }
@@ -61,7 +66,7 @@
         -4px -4px 0 $white, 4px 0px 0 $white, 0px 4px 0 $white,
         -4px 0px 0 $white, 0px -4px 0 $white;
 
-    @include r(768) {
+    @include r(767) {
         background-color: $white;
         display: block;
     }
@@ -82,7 +87,7 @@
     @include r(900) {
         font-size: 23px;
     }
-    @include r(768) {
+    @include r(767) {
         display: inline;
     }
 }

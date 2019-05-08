@@ -1,0 +1,48 @@
+{% set
+  list = [
+    {
+      img: "igor.png",
+      name: "Ігор Курков",
+      company: "DB2 Limited",
+      text1: "Веб — мое хобби. Если вы думаете, что войти в IT легко — сомневайтесь.",
+      text2: "99% отваливаются на начальном этапе. Но с курсом Коттанов — у IT просто нет шансов перед вами. Коттанский фронтенд — это как британский спецназ, буткэмп от МИ-6."
+    },
+    {
+      img: "stepashko.png",
+      name: "Анна Степашко",
+      company: "Відкриті публічні фінанси",
+      text1: "Котаны не только разжевывают базу и энное количество раз повторяют, чтобы дошло, но и очень хорошо тренируют самоорганизованность (лично у меня левел поднялся).",
+      text2: "А еще это большая семья — всегда есть поддержка в чатах (если где-то застрял), совместные вылазки-шашлыки etc."
+    },
+    {
+      img: "orlov.png",
+      name: "Євген Орлов",
+      company: "Adraba",
+      text1: "Раджу курси Kottans всім, хто не шукає короткої стежки в IT, але хоче справді розбиратись в темі та бути досить затребуваним на ринку.",
+      text2: " Ці натхенні люди заряджають своїм ентузіазмом і дають поштовх рухатись далі — вчитись самому і допомагати іншим охочим навчитись."
+    }
+  ]
+%}
+
+<section class = "sections about-kottats">
+  <div class = "container">
+    <h2 class = "h2-sections">Що кажуть про <span class="h2-sections-rebase">Коттанів</span></h2>
+
+    {% for data in list %}
+    <div class = "item">
+      <img src = "./img/aboutkottans/{{data.img}}" alt = "{{data.name}}">
+      <div class = "photo-content">
+        <p class = "name">{{data.name}}<span>, {{data.company}}</span></h3>
+        <p class = "photo-p">{{data.text1}}</p>
+        <p class = "photo-p">{{data.text2}}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class = "red-btn-wrapper">
+      <a href = "https://dou.ua/forums/topic/25282/" class="about-link">
+        Подивитись інші відгуки
+      </a>
+    </div>
+  </div>
+</section>

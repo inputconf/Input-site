@@ -27,6 +27,10 @@
     align-items: center;
     position: relative;
     z-index: 2;
+
+    @include r(767) {
+        max-width: 340px;
+    }
 }
 
 .speakers-link {

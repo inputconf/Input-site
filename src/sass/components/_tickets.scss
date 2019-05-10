@@ -89,6 +89,10 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 395px;
+
+    @include r(960) {
+		min-height: 425px;
+	}
 }
 
 .ticket-footer {
@@ -116,21 +120,19 @@
 .img-wrapper {
     text-align: left;
     min-height: 120px;
-    width: auto;
+    width: 120px;
     background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.img-wrapper-early {
-    background-image: url(../img/tickets/bird-1.png);
+    background-size: cover;
+    background-image: url(../img/tickets/sprite-bird.png);
+    background-position: 0 0;
 }
 
 .img-wrapper-standart {
-    background-image: url(../img/tickets/bird-2.png);
+    background-position: -120px 0;
 }
 
 .img-wrapper-owl {
-    background-image: url(../img/tickets/bird-3.png);
+    background-position: -240px 0;
 }
 
 .supporter {
@@ -191,11 +193,14 @@
     min-height: 400px;
     background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
 
+    @include r(794) {
+        min-height: 415px;
+    }
+
     @include r(490) {
         grid-template-columns: 1fr;
         grid-template-rows: max-content;
     }
-
 }
 
 .ticket-img {

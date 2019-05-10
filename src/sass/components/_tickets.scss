@@ -89,6 +89,10 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 395px;
+
+    @include r(960) {
+		min-height: 425px;
+	}
 }
 
 .ticket-footer {
@@ -191,11 +195,14 @@
     min-height: 400px;
     background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
 
+    @include r(794) {
+        min-height: 415px;
+    }
+
     @include r(490) {
         grid-template-columns: 1fr;
         grid-template-rows: max-content;
     }
-
 }
 
 .ticket-img {

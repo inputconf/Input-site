@@ -6,7 +6,7 @@
 .organizers__wrapper > .container {
     padding: 0 40px;
 
-    @include r(320) {
+    @include r(375) {
         padding: 0 20px;
     }
 }
@@ -21,7 +21,7 @@
 }
 
 .organizers__title {
-    color: white;
+    color: $white;
     font-size: 80px;
 
     @include r(900) {
@@ -77,11 +77,28 @@
 .organizers__icon {
     width: 100%;
     position: sticky;
-    top: 20px;
+    top: 55px;
 }
+
 .organizers__h3 {
+    text-align: left;
+
+    @include r(767) {
+        text-align: center;
+        font-size: 42px;
+    }
+}
+
+.organizers__h3 > span {
+    background: linear-gradient(to right,#00C9E4, #2035F0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.organizers__h4 {
     font-size: 24px;
-    color: white;
+    color: $white;
 
     @include r(400) {
         font-size: 18px;
@@ -92,13 +109,39 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 1.3;
-    color: #fff5;
+    color: rgba(255,255,255,0.333);
     hyphens: auto;
+
+    @include r(767) {
+        color: rgba(255,255,255,0.85);
+    }
 
     @include r(400) {
         font-size: 18px;
     }
 }
+
+.organizers__text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba($black, 0.2);
+
+    @include r(767) {
+        font-size: 24px;
+    }
+
+    @include r(400) {
+        font-size: 18px;
+    }
+}
+
+.organizers__text--gradient {
+    background-image: url(../img/organizers/text_gradient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .organizers__kottans-citation {
     margin: 20px 0;
 }
@@ -116,5 +159,15 @@
 
     @include r(600) {
         display: block;
+    }
+}
+
+.icon-pills {
+    position: relative;
+    top: 10px;
+    transform: rotate(-20deg);
+
+    @include r(767) {
+        top: 3px;
     }
 }

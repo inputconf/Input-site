@@ -120,21 +120,19 @@
 .img-wrapper {
     text-align: left;
     min-height: 120px;
-    width: auto;
+    width: 120px;
     background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.img-wrapper-early {
-    background-image: url(../img/tickets/bird-1.png);
+    background-size: cover;
+    background-image: url(../img/tickets/sprite-bird.png);
+    background-position: 0 0;
 }
 
 .img-wrapper-standart {
-    background-image: url(../img/tickets/bird-2.png);
+    background-position: -120px 0;
 }
 
 .img-wrapper-owl {
-    background-image: url(../img/tickets/bird-3.png);
+    background-position: -240px 0;
 }
 
 .supporter {

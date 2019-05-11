@@ -232,13 +232,13 @@
     border-radius: 7px;
     margin-top: 8px;
     padding: 3px 10px;
-    background-color: #00ff2a;
+    background-color: hsla(130, 100%, 50%, 0.3);
     border-bottom: none;
 }
 .header-menu-list > li > a.buy-a-ticket:hover {
     color: black;
     border-bottom: none;
-    background-color: #00ff2a;
+    background-color: hsla(130, 100%, 50%, 1);
 }
 
 .header-menu-active .header-menu-list {
@@ -456,7 +456,7 @@
     }
 }
 
-.header-bottom-block{
+.header-bottom-block {
     flex-grow: 1;
     width: 250px;
 }

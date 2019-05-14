@@ -14,6 +14,15 @@
 	border: 2px solid $soft-blue
 	font-size: 18px
 
+	+r(1000)
+		flex-basis: 300px
+		max-width: 45%
+		font-size: 22px
+
+	+r(500)
+		flex-basis: 100%
+		max-width: 100%
+
 .speakers__image-wrapper
 	position: relative
 	padding-bottom: 100%
@@ -35,6 +44,9 @@
 .speakers__link
 	color: $blue
 	font-size: 22px
+
+	+r(1000)
+		font-size: 24px
 
 .speakers__link:hover
 	text-decoration: none

@@ -4,15 +4,17 @@
 .speakers__grid
 	display: flex
 	flex-flow: row wrap
-	justify-content: center
+	justify-content: flex-start
 
 .speakers__item
 	flex: 1 0 250px
 	max-width: 300px
 	margin: 10px
-	padding: 20px 15px
-	border: 2px solid $soft-blue
+	padding: 15px
+	padding-bottom: 50px
 	font-size: 18px
+	background-color: $white
+	box-shadow: 0 30px 50px -15px #abc
 
 	+r(1000)
 		flex-basis: 300px
@@ -29,7 +31,7 @@
 	padding-top: 30px
 	height: 0
 	overflow: hidden
-	margin: 0 auto 20px
+	margin: 0 auto 10px
 	max-height: 200px
 
 .speakers__image
@@ -53,4 +55,7 @@
 	color: $red
 
 .speakers__position
+	border-radius: 5px
+	margin-left: -3px
+	padding: 0 5px
 	background-color: $yellow

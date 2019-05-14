@@ -1,4 +1,4 @@
-.speakers {
+.speakers-call {
     padding: 70px 10px;
 
     @include r(900) {
@@ -33,7 +33,7 @@
     }
 }
 
-.speakers-link {
+.speakers-call-link {
     position: absolute;
     top: -40px;
     left: 50%;

@@ -1,10 +1,60 @@
-<section class = "speakers" id="speakers">
-	<h2 class = "h2-sections">Наша тиша хоче, <br> щоб ви говорили</h2>
-		<div class = "link-wrapper">
-			<img class = "girl" alt = "girl" src = "/img/speakers/girl.svg">
-      <a href = "http://input.tilda.ws/" target="_blank" class="speakers-link">
-        Сайт для спікерів
-			</a>
-			<img class = "boy" alt = "boy" src = "/img/speakers/boy.svg">
-		</div>
+{% set
+  list = [
+    {
+      img: 'Shvydka.jpg',
+      img2: 'Shvydka2x.jpg',
+      name: "Дар`я Швидка",
+      link: 'https://twitter.com/sonnyberkowitz',
+      position: 'Ui developer',
+      company: "Siftery"
+    },
+    {
+      img: 'lylyk.jpg',
+      img2: 'lylyk2x.jpg',
+      name: "Діма Лилик",
+      link: 'https://www.facebook.com/dima.lylyk',
+      position: 'Brand Ambassador',
+      company: "Rails Reactor"
+    },
+    {
+      img: 'Shurupova.jpg',
+      img2: 'Shurupova2x.jpg',
+      name: "Євгенія Шурупова",
+      link: 'https://www.facebook.com/evgeniya.shurupova',
+      position: 'Senior Usability Designer',
+      company: "Global Logic"
+    },
+    {
+      img: 'Mikhnenko.jpg',
+      img2: 'Mikhnenko.jpg',
+      name: "Олександр Міхненко",
+      link: 'https://www.facebook.com/toklian',
+      position: 'Senior DevOps Engineer',
+      company: "Star"
+    }
+  ]
+%}
+
+<section class="speackers" id="speackers">
+  <div class="container">
+    <h2 class="h2-sections">Наші спікери</h2>
+    <div class="speakers__grid">
+
+      {% for data in list %}
+      <article class="speakers__item">
+        <div class="speakers__image-wrapper">
+          <picture>
+            <source srcset="./img/speakers/people/{{data.img2}}" media="(max-width: 767px)">
+            <img src="./img/speakers/people/{{data.img}}"
+                alt="{{data.name}}"
+                class="speakers__image">
+          </picture>
+        </div>
+        <a href="{{data.link}}" class="speakers__link">{{data.name}}</a>
+        <p><span class="speakers__position">{{data.position}}</span></p>
+        <p class="speakers__company">{{data.company}}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
 </section>

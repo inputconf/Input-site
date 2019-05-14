@@ -1,31 +1,60 @@
+{% set
+  list = [
+    {
+      img: 'Shvydka.jpg',
+      img2: 'Shvydka2x.jpg',
+      name: "Дар`я Швидка",
+      link: 'https://twitter.com/sonnyberkowitz',
+      position: 'Ui developer',
+      company: "Siftery"
+    },
+    {
+      img: 'lylyk.jpg',
+      img2: 'lylyk2x.jpg',
+      name: "Діма Лилик",
+      link: 'https://www.facebook.com/dima.lylyk',
+      position: 'Brand Ambassador',
+      company: "Rails Reactor"
+    },
+    {
+      img: 'Shurupova.jpg',
+      img2: 'Shurupova2x.jpg',
+      name: "Євгенія Шурупова",
+      link: 'https://www.facebook.com/evgeniya.shurupova',
+      position: 'Senior Usability Designer',
+      company: "Global Logic"
+    },
+    {
+      img: 'Mikhnenko.jpg',
+      img2: 'Mikhnenko.jpg',
+      name: "Олександр Міхненко",
+      link: 'https://www.facebook.com/toklian',
+      position: 'Senior DevOps Engineer',
+      company: "Star"
+    }
+  ]
+%}
+
 <section class="speackers" id="speackers">
   <div class="container">
     <h2 class="h2-sections">Наші спікери</h2>
     <div class="speakers__grid">
+
+      {% for data in list %}
       <article class="speakers__item">
-        <img src="./img/speakers/people/Shvydka.jpg" alt="" class="speakers__image">
-        <a href="https://twitter.com/sonnyberkowitz" class="speakers__link">Дар`я Швидка</a>
-        <p class="speakers__position">Ui developer</p>
-        <p class="speakers__company">Siftery</p>
+        <div class="speakers__image-wrapper">
+          <picture>
+            <source srcset="./img/speakers/people/{{data.img2}}" media="(max-width: 767px)">
+            <img src="./img/speakers/people/{{data.img}}"
+                alt="{{data.name}}"
+                class="speakers__image">
+          </picture>
+        </div>
+        <a href="{{data.link}}" class="speakers__link">{{data.name}}</a>
+        <p><span class="speakers__position">{{data.position}}</span></p>
+        <p class="speakers__company">{{data.company}}</p>
       </article>
-      <article class="speakers__item">
-        <img src="./img/speakers/people/Shvydka.jpg" alt="" class="speakers__image">
-        <a href="https://twitter.com/sonnyberkowitz" class="speakers__link">Дар`я Швидка</a>
-        <p class="speakers__position">Ui developer</p>
-        <p class="speakers__company">Siftery</p>
-      </article>
-      <article class="speakers__item">
-        <img src="./img/speakers/people/Shvydka.jpg" alt="" class="speakers__image">
-        <a href="https://twitter.com/sonnyberkowitz" class="speakers__link">Дар`я Швидка</a>
-        <p class="speakers__position">Ui developer</p>
-        <p class="speakers__company">Siftery</p>
-      </article>
-      <article class="speakers__item">
-        <img src="./img/speakers/people/Shvydka.jpg" alt="" class="speakers__image">
-        <a href="https://twitter.com/sonnyberkowitz" class="speakers__link">Дар`я Швидка</a>
-        <p class="speakers__position">Ui developer</p>
-        <p class="speakers__company">Siftery</p>
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>

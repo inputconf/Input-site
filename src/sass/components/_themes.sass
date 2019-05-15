@@ -1,4 +1,5 @@
 .themes
+	position: relative
 	text-align: center
 	min-height: 1000px
 
@@ -39,51 +40,34 @@
 	+r(320)
 		padding: 40px 20px
 
-.themes-wrapper::after
-	content: ''
-	display: block
-	width: 100%
-	height: 100%
+.themes__video-wrapper
 	position: absolute
-	top: 0
-	left: 0
-	z-index: 2
-	background-image: url(/img/themes/Hmm-on-dark.gif)
-	background-position: center 60%
-	background-repeat: no-repeat
-	background-size: 25%
-
-	+r(1200)
-		background-position: center 130px
-		background-size: 300px
-		display: none
-
-	+r(900)
-		background-position: center 110px
-		background-size: 300px
-
-.themes__hmm-wrapper
-	background: linear-gradient((0deg, rgba(26, 16, 12, 1), rgba(26, 16, 12, 0.75), rgba($white, 0)))
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 	z-index: 4
-	position: sticky
-	display: none
-	margin: -15px -55px 0px -55px
-	bottom: 0
+	text-align: center
 
 	+r(1200)
-		display: block
-		margin: -15px -20px 0px -20px
+		position: sticky
+		bottom: 0
+		left: 0
+		transform: translate(0, 0)
+		margin: 0 -20px
+		z-index: 4
+		background: linear-gradient((0deg, rgba(26, 16, 12, 1), rgba(26, 16, 12, 0.75), rgba($white, 0)))
 
 	+r(900)
 		margin: -15px -40px 0px -40px
 
-	+r(320)
-		margin: -15px -20px 0px -20px
-
-.themes__hmm-gif
+.themes__video
 	width: 70%
+	height: auto
+	max-height: 100%
 	margin: 0 auto
-	max-width: 30vh
+
+	+r(1200)
+		max-width: 30%
 
 .themes__list
 	position: relative

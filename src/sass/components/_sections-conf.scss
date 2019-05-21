@@ -5,7 +5,8 @@
 }
 
 .schedule-item {
-	a { color: #208fdf;;
+	a { 
+		color: #208fdf;;
 		text-decoration: none;
 		border-bottom: 2px dotted #208fdf;
 	}
@@ -41,11 +42,16 @@
 }
 
 .section-buttons {
-margin: 0 auto;
-display: block;
+	margin: 0 auto;
+	display: block;
 }
 
 .section-bottom-block {
 	width: 300px;
+	margin: 0 auto;
+}
+
+.center {
+	margin: 0 auto;
 }
 

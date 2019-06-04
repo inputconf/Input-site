@@ -1,4 +1,4 @@
-import bodymovin from 'lottie-web';
+import bodymovin from './lib/lottie_light.min';
 import logoAnimation from './data/data.json';
 import openMenu from './lib/mobile-menu';
 

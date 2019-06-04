@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-const util = require('gulp-util');
 const config = require('./gulp/config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -91,10 +90,9 @@ function createConfig(env) {
             path.resolve(__dirname, 'node_modules'),
           ],
         },
-        {
-            test: /\.glsl$/,
-            loader: 'webpack-glsl-loader'
-        }],
+        { test: /\.(glsl|frag|vert)$/, loader: 'raw-loader', exclude: /node_modules/ },
+        { test: /\.(glsl|frag|vert)$/, loader: 'glslify-loader', exclude: /node_modules/ }
+        ],
     },
   };
 

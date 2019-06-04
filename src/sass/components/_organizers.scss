@@ -166,6 +166,7 @@
     position: relative;
     top: 10px;
     transform: rotate(-20deg);
+    fill: #ecd8e7;
 
     @include r(767) {
         top: 3px;

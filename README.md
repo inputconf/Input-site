@@ -57,4 +57,28 @@ You can also use [npm scripts](https://docs.npmjs.com/misc/scripts):
 * `npm run lint` - linting javascript with **eslint**.
 * `npm run lint-fix` - fix as many issues as possible relatives to **eslint** settings.
 
+## Git-flow
+The main branch for development is - `develop`.
+All new branches create from `develop` branch.
+Destination branch for Pull-request is `develop` too.
 
+#### Branch naming
+
+`kind/issues_number(if branch creates because of issue)-short general description`
+
+Species:
+
+* `add` - In case adding new section/block/content/bug
+* `feature ` - In case developing new feature.
+* `bugfix` - In case fixing bug.
+
+Examples:
+
+`add/13-section-contacts` - Adding new section "Contacts" from issue number 13.
+`feature/subscribe-button` - Adding new functionality with button subscribe, without issue.
+`bugfix/14-remove-section-wait` - Remove section "Wait" by issue number 14.
+
+If Pull request created by an issue in comments to this issue leave a comment:  
+`Resolved by [Pull request number](link on pull request)`
+
+Example: `Resolverd by [PR#137](https://github.com/inputconf/Input-site/pull/137)`

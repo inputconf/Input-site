@@ -30,9 +30,12 @@
 
     {% for data in list %}
     <div class = "item">
-      <img src = "./img/aboutkottans/{{data.img}}" alt = "{{data.name}}">
+      <img src = ""
+           data-srcset="./img/aboutkottans/{{data.img}}"
+           class="lazy"
+           alt = "{{data.name}}"/>
       <div class = "photo-content">
-        <p class = "name">{{data.name}}<span>, {{data.company}}</span></h3>
+        <p class = "name">{{data.name}}<span>, {{data.company}}</span></p>
         <p class = "photo-p">{{data.text1}}</p>
         <p class = "photo-p">{{data.text2}}</p>
       </div>

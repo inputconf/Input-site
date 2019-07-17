@@ -211,10 +211,11 @@
       <article class="speakers__item">
         <div class="speakers__image-wrapper">
           <picture>
-            <source srcset="./img/speakers/people/{{data.img2}}" media="(max-width: 767px)">
-            <img src="./img/speakers/people/{{data.img}}"
+            <source srcset="./img/speakers/people/{{data.img2}}" media="(max-width: 767px)"/>
+            <img src=""
+                 data-srcset="./img/speakers/people/{{data.img}}"
                 alt="{{data.name}}"
-                class="speakers__image">
+                class="speakers__image lazy"/>
           </picture>
         </div>
         <a href="{{data.link}}" class="speakers__link" target="_blank">{{data.name}}</a>

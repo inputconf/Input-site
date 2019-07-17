@@ -2,12 +2,14 @@
   list = [
     {
       title: 'Рання пташечка',
+      position: '0',
       text: 'Для перших 50',
       text2: 'спартанцiв',
       price: '360'
     },
     {
       class: 'img-wrapper-standart',
+      position: '-120px',
       title: 'Стандарт',
       text: 'І колу 0.5, будь ласка!',
       class2: 'ticket-price-standart',
@@ -15,6 +17,7 @@
     },
     {
       class: 'img-wrapper-owl',
+      position: '-240px',
       title: 'Совушка',
       text: 'Останній покупець',
       text2: ' на Землі',
@@ -31,7 +34,8 @@
       {% for data in list %}
 			<div class = "ticket-item bird">
           <div class="ticket-body">
-            <div class="img-wrapper {% if data.class %}{{data.class}}{% endif %}">
+            <div class="img-wrapper lazy-background {% if data.class %}{{data.class}}{% endif %}"
+            data-bg="url(../img/tickets/sprite-bird.png) no-repeat {{data.position}} 0">
             </div>
             <h3 class="ticket-title">{{data.title}}</h3>
             <p class = "ticket-description">{{data.text}}
@@ -56,8 +60,8 @@
 		</div>
 		<div class = "tickets-wrapper">
 			<div class = "ticket-item supporter">
-        <div class="ticket-body">
-          <div class="ticket-img"></div>
+        <div class="ticket-body lazy-background" data-bg="url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%)">
+          <div class="ticket-img lazy-background" data-bg="url(../img/tickets/bird-4.png) no-repeat center center"></div>
           <div class="ticket-head">
             <h3 class="ticket-title">Supporter</h3>
             <div class="ticket-description">
@@ -81,13 +85,14 @@
             <dd class="ticket-set-item">+подяка в наших медіа</dd>
           </dl>
         </div>
-        <footer class="ticket-footer">
-          <div class="ticket-footer-block"></div>
+        <footer class="ticket-footer lazy-background"
+        data-bg="url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%)">
+          <div class="ticket-footer-block lazy-background" data-bg="url(../img/tickets/barcode-big.png) no-repeat center center"></div>
         </footer>
       </div>
       <div class = "ticket-item supporter supporter-ss">
-        <div class="ticket-body">
-          <div class="ticket-img"></div>
+        <div class="ticket-body lazy-background" data-bg="url(../img/tickets/paper-texture.png), radial-gradient(529.81px at 1.09% 2.3%, rgba(60, 60, 60, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%)">
+          <div class="ticket-img lazy-background" data-bg="url(../img/tickets/bird-4.png) no-repeat center center"></div>
           <div class="ticket-head">
             <h3 class="ticket-title">Super Supporter</h3>
             <div class="ticket-description">
@@ -111,8 +116,9 @@
             <dd class="ticket-set-item">+особлива подяка в наших медіа</dd>
           </dl>
         </div>
-        <footer class="ticket-footer">
-          <div class="ticket-footer-block"></div>
+        <footer class="ticket-footer lazy-background"
+        data-bg="url(../img/tickets/paper-texture.png), radial-gradient(529.81px at 1.09% 2.3%, rgba(60, 60, 60, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%)">
+          <div class="ticket-footer-block lazy-background" data-bg="url(../img/tickets/barcode-big.png) no-repeat center center"></div>
         </footer>
 			</div>
 		</div>

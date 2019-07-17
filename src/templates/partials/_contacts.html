@@ -51,11 +51,10 @@
         {% for data in list %}
           <div class="{{data.class}}">
             <a href="{{data.link}}" class="contacts__socials-link">
-              <img
-                src="{{data.img}}"
+              <img data-srcset="{{data.img}}"
                 alt="{{data.alt}}"
-                class="contacts__socials-img"
-              />
+                class="contacts__socials-img lazy"
+              >
             </a>
           </div>
         {% endfor %}

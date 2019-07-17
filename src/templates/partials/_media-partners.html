@@ -84,7 +84,10 @@
     {% for data in list %}
       <div class="media-partners__item" id="{{data.id}}">
         <div class="media-partners__logo">
-          <div class="media-partners__img" style="background-image:url(/img/partners/media/{{data.img}});"></div>
+          <div class="media-partners__img lazy-background"
+               data-bg="url(/img/partners/media/{{data.img}})"
+               >
+          </div>
         </div>
         <div class="media-partners__name">
           <a href="{{data.link}}" class="media-partners__link">

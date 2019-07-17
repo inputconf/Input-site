@@ -121,18 +121,7 @@
     text-align: left;
     min-height: 120px;
     width: 120px;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/tickets/sprite-bird.png);
-    background-position: 0 0;
-}
-
-.img-wrapper-standart {
-    background-position: -120px 0;
-}
-
-.img-wrapper-owl {
-    background-position: -240px 0;
 }
 
 .supporter {
@@ -191,7 +180,6 @@
     grid-template-rows: repeat(3, max-content);
     grid-column-gap: 10px;
     min-height: 400px;
-    background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
 
     @include r(794) {
         min-height: 415px;
@@ -204,19 +192,16 @@
 }
 
 .ticket-img {
-    min-height: 120px;
-    height: 100%;
-    background-image: url(../img/tickets/bird-4.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    min-height: 120px!important;
+    height: 100%!important;
+    background-size: contain!important;
 }
 
-.supporter .ticket-img {
-    background-size: 70%;
+.supporter:first-child .ticket-img {
+    background-size: 70%!important;
 
     @include r(490) {
-        background-size: contain;
+        background-size: contain!important;
     }
 }
 
@@ -228,17 +213,8 @@
     }
 }
 
-.supporter .ticket-footer {
-    background: url(../img/tickets/paper-texture.png), radial-gradient(544.61px at 97.61% 1.61%, rgba(179, 179, 179, 0.98) 0%, rgba(117, 117, 117, 0.98) 100%);
-}
-
 .supporter .ticket-footer-block{
-    background-image: url(../img/tickets/barcode-big.png);
-    background-size: contain;
-}
-
-.supporter-ss .ticket-body, .supporter-ss .ticket-footer{
-    background: url(../img/tickets/paper-texture.png), radial-gradient(529.81px at 1.09% 2.3%, rgba(60, 60, 60, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%);
+    background-size: contain!important;
 }
 
 .supporter .ticket-description {

@@ -40,40 +40,7 @@
     background-size: cover, 1;
 
     &:nth-of-type(1) {
-        background: linear-gradient(
-                0deg,
-                rgba($white, 0.5),
-                rgba($white, 0.5)
-            ),
-            url("/img/sections/1.svg") no-repeat;
         background-position: center, 25px top;
-    }
-
-    &:nth-of-type(2) {
-        background: linear-gradient(
-                0deg,
-                rgba($white, 0.5),
-                rgba($white, 0.5)
-            ),
-            url("/img/sections/2.svg") no-repeat;
-    }
-
-    &:nth-of-type(3) {
-        background: linear-gradient(
-                0deg,
-                rgba($white, 0.5),
-                rgba($white, 0.5)
-            ),
-            url("/img/sections/3.svg") no-repeat;
-    }
-
-    &:nth-of-type(4) {
-        background: linear-gradient(
-                0deg,
-                rgba($white, 0.5),
-                rgba($white, 0.5)
-            ),
-            url("/img/sections/4.svg") no-repeat;
     }
 
     @include r(680) {

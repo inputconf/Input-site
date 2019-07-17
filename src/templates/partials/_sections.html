@@ -2,18 +2,22 @@
   list = [
     {
       title: "Особистий шлях в ІТ",
+      bg: "linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url('/img/sections/1.svg') no-repeat",
       text: "Вчорашні студенти, митці, філологи, світчери, що освоїли інженерні професії або розпочали кар'єру в HR, менеджменті, продажах розкажуть про проблеми, з якими часто стикаються новачки і шляхи їх подолання."
     },
     {
       title: "Навчання",
+      bg: "linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url('/img/sections/2.svg') no-repeat",
       text: "Як і де вчитися? який стек технологій і як обирати? як успішно свічнутися? курси або самоосвіта, плюси і мінуси?"
     },
     {
       title: "Відкриті IT ком'юніті",
+      bg: "linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url('/img/sections/3.svg') no-repeat",
       text: "Знайомство зі спільнотами; спілкування, підтримка, ком'юніті - як і де їх шукати?"
     },
     {
       title: "Кар'єра",
+      bg: "linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url('/img/sections/4.svg') no-repeat",
       text: "З чого почати пошук роботи, ідеальне резюме, співпраця з рекрутерами, перша робота і багато іншого."
     }
   ]
@@ -24,7 +28,8 @@
 		<h2 class = "h2-sections">Секції</h2>
 
     {% for data in list %}
-    <div class = "section-item">
+    <div class = "section-item lazy-background"
+    data-bg="{{data.bg}}">
 			<div class = "number-content">
 				<h3>{{data.title}}</h3>
 				<p>{{data.text}}</p>

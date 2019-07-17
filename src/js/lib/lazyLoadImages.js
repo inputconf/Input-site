@@ -36,7 +36,7 @@ function lazyLoadImages() {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           let lazyBackgroundData = entry.target;
-          lazyBackgroundData.style.backgroundImage = 'url(' + lazyBackgroundData.dataset.bg + ')';
+          lazyBackgroundData.style.background = lazyBackgroundData.dataset.bg;
           lazyBackgroundDataObserver.unobserve(lazyBackgroundData);
         }
       });
